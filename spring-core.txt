@@ -1,0 +1,618 @@
+- The IoC Container
+	* IoC is also known as dependency injection (DI). It is a process whereby objects define their dependencies (that is, the other objects they work with) only through constructor arguments, arguments to a factory method, or properties that are set on the object instance after it is constructed or returned from a factory method
+	* This process is fundamentally the inverse (hence the name, Inversion of Control) of the bean itself controlling the instantiation or location of its dependencies by using direct construction of classes or a mechanism such as the Service Locator pattern.
+	* The org.springframework.beans and org.springframework.context packages are the basis for Spring Framework’s IoC container. The BeanFactory interface provides an advanced configuration mechanism capable of managing any type of object. ApplicationContext is a sub-interface of BeanFactory
+	* It adds:
+	  Easier integration with Spring’s AOP features
+	  Message resource handling (for use in internationalization)
+	  Event publication
+	  Application-layer specific contexts such as the WebApplicationContext for use in web applications
+	* A bean is an object that is instantiated, assembled, and otherwise managed by a Spring IoC container. Otherwise, a bean is simply one of many objects in your application. Beans, and the dependencies among them, are reflected in the configuration metadata used by a container.
+	* The org.springframework.context.ApplicationContext interface represents the Spring IoC container and is responsible for instantiating, configuring, and assembling the beans. The container gets its instructions on what objects to instantiate, configure, and assemble by reading configuration metadata. The configuration metadata is represented in XML, Java annotations, or Java code. It lets you express the objects that compose your application and the rich interdependencies between those objects.
+	* Several implementations of the ApplicationContext interface are supplied with Spring. In stand-alone applications, it is common to create an instance of ClassPathXmlApplicationContext or FileSystemXmlApplicationContext
+	The following diagram shows a high-level view of how Spring works.
+	https://docs.spring.io/spring/docs/current/spring-framework-reference/images/container-magic.png
+
+- Configuration Metadata
+	* configuration metadata represents how you, as an application developer, tell the Spring container to instantiate, configure, and assemble the objects in your application
+	* Metadata can be supplied in 3 ways
+	   1. XML Based Configuration
+	   2. Annotation Based Configuration : Spring 2.5 introduced support for annotation-based configuration metadata.
+	   3. Java-based configuration: Starting with Spring 3.0, many features provided by the Spring JavaConfig project became part of the core Spring Framework.
+	* Spring configuration consists of at least one and typically more than one bean definition that the container must manage. XML-based configuration metadata configures these beans as <bean/> elements inside a top-level <beans/> element, Java configuration typically uses @Bean-annotated methods within a @Configuration class
+	* Typically, one does not configure fine-grained domain objects in the container, because it is usually the responsibility of DAOs and business logic to create and load domain objects. However, you can use Spring’s integration with AspectJ to configure objects that have been created outside the control of an IoC container
+	* XML Based Metadata
+		<?xml version="1.0" encoding="UTF-8"?>
+		<beans xmlns="http://www.springframework.org/schema/beans"
+		xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+		xsi:schemaLocation="http://www.springframework.org/schema/beans
+		http://www.springframework.org/schema/beans/spring-beans.xsd">
+
+		<bean id="" class="">
+		   <property name="" ref=""></property>
+		</bean>
+		</beans>
+	The id attribute is a string that identifies the individual bean definition.
+	The class attribute defines the type of the bean and uses the fully qualified classname.
+	The property name element refers to the name of the JavaBean property, 
+	The ref element refers to the name of another bean definition. 
+	This linkage between id and ref elements expresses the dependency between collaborating objects
+
+- Instantiating a Container
+	* The location path or paths supplied to an ApplicationContext constructor are resource strings that let the container load configuration metadata from a variety of external resources, such as the local file system, the Java CLASSPATH, and so on.
+
+	ApplicationContext context = new ClassPathXmlApplicationContext("services.xml", "daos.xml");
+	
+- Composing XML-based Configuration Metadata
+	* It can be useful to have bean definitions span multiple XML files. Often, each individual XML configuration file represents a logical layer or module in your architecture.
+	* You can use the application context constructor to load bean definitions from all these XML fragments. This constructor takes multiple Resource locations as 
+	ApplicationContext context = new ClassPathXmlApplicationContext("services.xml", "daos.xml");
+
+	Alternatively, use one or more occurrences of the <import/> element to load bean definitions from another file or files as
+	<beans>
+	    <import resource="services.xml"/>
+	    <import resource="resources/messageSource.xml"/>
+	    <import resource="/resources/themeSource.xml"/>
+
+	    <bean id="bean1" class="..."/>
+	    <bean id="bean2" class="..."/>
+	</beans>
+- Using the Container
+	* The ApplicationContext is the interface for an advanced factory capable of maintaining a registry of different beans and their dependencies. By using the method T getBean(String name, Class<T> requiredType), you can retrieve instances of your beans.
+	* The ApplicationContext lets you read bean definitions and access them, as the following
+	  ApplicationContext context = new ClassPathXmlApplicationContext("services.xml", "daos.xml");
+	// retrieve configured instance
+	 PetStoreService service = context.getBean("petStore", PetStoreService.class);
+	// use configured instance
+	 List<String> userList = service.getUsernameList()
+
+	* The most flexible variant is GenericApplicationContext in combination with reader delegates?—?for example, with XmlBeanDefinitionReader for XML files, as the following example shows:
+
+	GenericApplicationContext context = new GenericApplicationContext();
+	new XmlBeanDefinitionReader(context).loadBeanDefinitions("services.xml", "daos.xml");
+	context.refresh();
+
+- Bean Overview
+	* A Spring IoC container manages one or more beans. These beans are created with the configuration metadata that you supply to the container (for example, in the form of XML <bean/> definitions).
+	* Within the container itself, these bean definitions are represented as BeanDefinition objects, which contain (among other information) the following metadata:
+	  - A package-qualified class name: typically, the actual implementation class of the bean being defined.
+	  - Bean behavioral configuration elements, which state how the bean should behave in the container (scope, lifecycle callbacks, and so forth).
+	  - References to other beans that are needed for the bean to do its work. These references are also called collaborators or dependencies.
+	  - Other configuration settings to set in the newly created object?—?for example, the size limit of the pool or the number of connections to use in a bean that manages a connection pool.
+	* This metadata translates to a set of properties that make up each bean definition. 
+	  Class, Name, Scope, Constructor arguments, Properties, Autowriting mode, Lazy initialization mode,
+	  Initialization method, Destruction method.
+	* In addition to bean definitions that contain information on how to create a specific bean, the ApplicationContext implementations also permit the registration of existing objects that are created outside the container (by users). This is done by accessing the ApplicationContext’s BeanFactory through the getBeanFactory() method, which returns the BeanFactory DefaultListableBeanFactory implementation. DefaultListableBeanFactory supports this registration through the registerSingleton(..) and registerBeanDefinition(..) methods. However, typical applications work solely with beans defined through regular bean definition metadata.
+
+- Naming Beans
+	* Every bean has one or more identifiers. These identifiers must be unique within the container that hosts the bean. A bean usually has only one identifier. However, if it requires more than one, the extra ones can be considered aliases.
+	* In XML-based configuration metadata, you use the id attribute, the name attribute, or both to specify the bean identifiers. The id attribute lets you specify exactly one id. Conventionally, these names are alphanumeric ('myBean', 'someService', etc.), but they can contain special characters as well. If you want to introduce other aliases for the bean, you can also specify them in the name attribute, separated by a comma (,), semicolon (;), or white space.
+
+	aliases
+		<alias name="fromName" alias="toName"/>
+		<alias name="myApp-dataSource" alias="subsystemA-dataSource"/>
+		<alias name="myApp-dataSource" alias="subsystemB-dataSource"/>
+
+- Instantiation with a Static Factory Method
+	* When defining a bean that you create with a static factory method, use the class attribute to specify the class that contains the static factory method and an attribute named factory-method to specify the name of the factory method itself. You should be able to call this method (with optional arguments, as described later) and return a live object, which subsequently is treated as if it had been created through a constructor. One use for such a bean definition is to call static factories in legacy code.
+	* The following bean definition specifies that the bean be created by calling a factory method. The definition does not specify the type (class) of the returned object, only the class containing the factory method. In this example, the createInstance() method must be a static method. The following example shows how to specify a factory method:
+	<bean id="clientService"
+	 class="examples.ClientService"
+	 factory-method="createInstance"/>
+
+	 public class ClientService {
+	    private static ClientService clientService = new ClientService();
+	    private ClientService() {}
+
+	    public static ClientService createInstance() {
+		return clientService;
+	    }
+	}
+
+- Instantiation by Using an Instance Factory Method
+	* Similar to instantiation through a static factory method, instantiation with an instance factory method invokes a non-static method of an existing bean from the container to create a new bean. To use this mechanism, leave the class attribute empty and, in the factory-bean attribute, specify the name of a bean in the current (or parent or ancestor) container that contains the instance method that is to be invoked to create the object. Set the name of the factory method itself with the factory-method attribute. The following example shows how to configure such a bean:
+
+	<!-- the factory bean, which contains a method called createInstance() -->
+	<bean id="serviceLocator" class="examples.DefaultServiceLocator">
+	    <!-- inject any dependencies required by this locator bean -->
+	</bean>
+
+	<!-- the bean to be created via the factory bean -->
+	<bean id="clientService"
+	    factory-bean="serviceLocator"
+	    factory-method="createClientServiceInstance"/>
+
+	 public class DefaultServiceLocator {
+
+	    private static ClientService clientService = new ClientServiceImpl();
+
+	    public ClientService createClientServiceInstance() {
+		return clientService;
+	    }
+	 }
+
+	* One factory class can also hold more than one factory method, as the following example shows:
+	   <bean id="serviceLocator" class="examples.DefaultServiceLocator">
+	    <!-- inject any dependencies required by this locator bean -->
+	   </bean>
+
+	  <bean id="clientService"
+	    factory-bean="serviceLocator"
+	    factory-method="createClientServiceInstance"/>
+
+	  <bean id="accountService"
+	    factory-bean="serviceLocator"
+	    factory-method="createAccountServiceInstance"/>	
+
+	 public class DefaultServiceLocator {
+
+	    private static ClientService clientService = new ClientServiceImpl();
+
+	    private static AccountService accountService = new AccountServiceImpl();
+
+	    public ClientService createClientServiceInstance() {
+		return clientService;
+	    }
+
+	    public AccountService createAccountServiceInstance() {
+		return accountService;
+	    }
+	}
+
+- Dependencies
+   - Dependency Injection
+	* Dependency injection (DI) is a process whereby objects define their dependencies (that is, the other objects with which they work) only through constructor arguments, arguments to a factory method, or properties that are set on the object instance after it is constructed or returned from a factory method. The container then injects those dependencies when it creates the bean. This process is fundamentally the inverse (hence the name, Inversion of Control) of the bean itself controlling the instantiation or location of its dependencies on its own by using direct construction of classes or the Service Locator pattern.
+	* DI exists in two major variants: 
+	  1. Constructor-based dependency injection 
+	     - Constructor-based DI is accomplished by the container invoking a constructor with a number of arguments, each representing a dependency. Calling a static factory method with specific arguments to construct the bean is nearly equivalent, and this discussion treats arguments to a constructor and to a static factory method similarly.
+	     - Constructor argument resolution matching occurs by using the argument’s type
+	     - The index is 0-based.
+	     EX:
+		<constructor-arg name="years" value="7500000"/>
+		  - Keep in mind that, to make this work out of the box, your code must be compiled with the debug flag enabled so that Spring can look up the parameter name from the constructor. If you cannot or do not want to compile your code with the debug flag, you can use @ConstructorProperties JDK annotation to explicitly name your constructor arguments
+			public class ExampleBean {
+			    // Fields omitted
+			    @ConstructorProperties({"years"})
+			    public ExampleBean(int years) {
+				this.years = years;
+			    }
+			}
+		<constructor-arg type="int" value="42"/>
+		<constructor-arg index="0" value="42"/>
+		
+	  2. Setter-based dependency injection.
+	     - Setter-based DI is accomplished by the container calling setter methods on your beans after invoking a no-argument constructor or a no-argument static factory method to instantiate your bean.
+	     - The ApplicationContext supports constructor-based and setter-based DI for the beans it manages. It also supports setter-based DI after some dependencies have already been injected through the constructor approach. You configure the dependencies in the form of a BeanDefinition, which you use in conjunction with PropertyEditor instances to convert properties from one format to another.
+
+	   -- Since you can mix constructor-based and setter-based DI, it is a good rule of thumb to use constructors for mandatory dependencies and setter methods or configuration methods for optional dependencies. Note that use of the @Required annotation on a setter method can be used to make the property be a required dependency.
+
+	   -- The Spring team generally advocates constructor injection, as it lets you implement application components as immutable objects and ensures that required dependencies are not null. Furthermore, constructor-injected components are always returned to the client (calling) code in a fully initialized state. As a side note, a large number of constructor arguments is a bad code smell, implying that the class likely has too many responsibilities and should be refactored to better address proper separation of concerns.
+
+	   -- Setter injection should primarily only be used for optional dependencies that can be assigned reasonable default values within the class. Otherwise, not-null checks must be performed everywhere the code uses the dependency. One benefit of setter injection is that setter methods make objects of that class amenable to reconfiguration or re-injection later. Management through JMX MBeans is therefore a compelling use case for setter injection
+
+   - Dependency Resolution Process
+	-The container performs bean dependency resolution as follows:
+		- The ApplicationContext is created and initialized with configuration metadata that describes all the beans. Configuration metadata can be specified by XML, Java code, or annotations.
+		- For each bean, its dependencies are expressed in the form of properties, constructor arguments, or arguments to the static-factory method (if you use that instead of a normal constructor). These dependencies are provided to the bean, when the bean is actually created.
+		- Each property or constructor argument is an actual definition of the value to set, or a reference to another bean in the container.
+		- Each property or constructor argument that is a value is converted from its specified format to the actual type of that property or constructor argument. By default, Spring can convert a value supplied in string format to all built-in types, such as int, long, String, boolean, and so forth.
+		
+   - Dependencies and Configuration in Detail
+	-Straight Values (Primitives, Strings, and so on)
+		The value attribute of the <property/> element specifies a property or constructor argument as a human-readable string representation. Spring’s conversion service is used to convert these values from a String to the actual type of the property or argument.
+	You can also configure a java.util.Properties instance, as follows:
+
+		<bean id="mappings"
+			class="org.springframework.beans.factory.config.PropertyPlaceholderConfigurer">
+
+			<!-- typed as a java.util.Properties -->
+			<property name="properties">
+				<value>
+					jdbc.driver.className=com.mysql.jdbc.Driver
+					jdbc.url=jdbc:mysql://localhost:3306/mydb
+				</value>
+			</property>
+		</bean>
+	-The Spring container converts the text inside the <value/> element into a java.util.Properties instance by using the JavaBeans PropertyEditor mechanism. This is a nice shortcut, and is one of a few places where the Spring team do favor the use of the nested <value/> element over the value attribute style.
+	
+	- The idref element
+		The idref element is simply an error-proof way to pass the id (a string value - not a reference) of another bean in the container to a <constructor-arg/> or <property/> element. 
+		<bean id="theTargetBean" class="..."/>
+
+		<bean id="theClientBean" class="...">
+			<property name="targetName">
+				<idref bean="theTargetBean"/>
+			</property>
+		</bean>
+
+		The preceding bean definition snippet is exactly equivalent (at runtime) to the following snippet:
+
+		<bean id="theTargetBean" class="..." />
+
+		<bean id="client" class="...">
+			<property name="targetName" value="theTargetBean"/>
+		</bean>
+		
+	-- The local attribute on the idref element is no longer supported in the 4.0 beans XSD, since it does not provide value over a regular bean reference any more. Change your existing idref local references to idref bean when upgrading to the 4.0 schema
+	
+	- References to Other Beans (Collaborators)
+		The ref element is the final element inside a <constructor-arg/> or <property/> definition element. Here, you set the value of the specified property of a bean to be a reference to another bean (a collaborator) managed by the container. The referenced bean is a dependency of the bean whose property is to be set, and it is initialized on demand as needed before the property is set. (If the collaborator is a singleton bean, it may already be initialized by the container.) All references are ultimately a reference to another object. Scoping and validation depend on whether you specify the ID or name of the other object through the bean, local, or parent attributes.
+		
+		Specifying the target bean through the parent attribute creates a reference to a bean that is in a parent container of the current container. The value of the parent attribute may be the same as either the id attribute of the target bean or one of the values in the name attribute of the target bean. The target bean must be in a parent container of the current one. You should use this bean reference variant mainly when you have a hierarchy of containers and you want to wrap an existing bean in a parent container with a proxy that has the same name as the parent bean. The following pair of listings shows how to use the parent attribute:
+		
+		<ref bean="someBean"/>
+		<bean id="accountService" class="com.something.SimpleAccountService">
+			<!-- insert dependencies as required as here -->
+		</bean>
+		
+		<!-- in the child (descendant) context -->
+		<bean id="accountService" <!-- bean name is the same as the parent bean -->
+			class="org.springframework.aop.framework.ProxyFactoryBean">
+			<property name="target">
+				<ref parent="accountService"/> <!-- notice how we refer to the parent bean -->
+			</property>
+			<!-- insert other configuration and dependencies as required here -->
+		</bean>
+		
+	- Inner Beans
+		A <bean/> element inside the <property/> or <constructor-arg/> elements defines an inner bean, as the following example shows:
+
+		<bean id="outer" class="...">
+			<!-- instead of using a reference to a target bean, simply define the target bean inline -->
+			<property name="target">
+				<bean class="com.example.Person"> <!-- this is the inner bean -->
+					<property name="name" value="Fiona Apple"/>
+					<property name="age" value="25"/>
+				</bean>
+			</property>
+		</bean>
+		An inner bean definition does not require a defined ID or name. If specified, the container does not use such a value as an identifier. The container also ignores the scope flag on creation, because inner beans are always anonymous and are always created with the outer bean. It is not possible to access inner beans independently or to inject them into collaborating beans other than into the enclosing bean.
+
+		As a corner case, it is possible to receive destruction callbacks from a custom scope?—?for example, for a request-scoped inner bean contained within a singleton bean. The creation of the inner bean instance is tied to its containing bean, but destruction callbacks let it participate in the request scope’s lifecycle. This is not a common scenario. Inner beans typically simply share their containing bean’s scope.	
+		
+	- Collections
+		The <list/>, <set/>, <map/>, and <props/> elements set the properties and arguments of the Java Collection types List, Set, Map, and Properties, respectively. The following example shows how to use them:
+
+		<bean id="moreComplexObject" class="example.ComplexObject">
+			<!-- results in a setAdminEmails(java.util.Properties) call -->
+			<property name="adminEmails">
+				<props>
+					<prop key="administrator">administrator@example.org</prop>
+					<prop key="support">support@example.org</prop>
+					<prop key="development">development@example.org</prop>
+				</props>
+			</property>
+			<!-- results in a setSomeList(java.util.List) call -->
+			<property name="someList">
+				<list>
+					<value>a list element followed by a reference</value>
+					<ref bean="myDataSource" />
+				</list>
+			</property>
+			<!-- results in a setSomeMap(java.util.Map) call -->
+			<property name="someMap">
+				<map>
+					<entry key="an entry" value="just some string"/>
+					<entry key ="a ref" value-ref="myDataSource"/>
+				</map>
+			</property>
+			<!-- results in a setSomeSet(java.util.Set) call -->
+			<property name="someSet">
+				<set>
+					<value>just some string</value>
+					<ref bean="myDataSource" />
+				</set>
+			</property>
+		</bean>
+		The value of a map key or value, or a set value, can also be any of the following elements:
+
+		bean | ref | idref | list | set | map | props | value | null	
+		
+	- Collection Merging
+		The Spring container also supports merging collections. An application developer can define a parent <list/>, <map/>, <set/> or <props/> element and have child <list/>, <map/>, <set/> or <props/> elements inherit and override values from the parent collection. That is, the child collection’s values are the result of merging the elements of the parent and child collections, with the child’s collection elements overriding values specified in the parent collection.
+		
+		The following example demonstrates collection merging:
+
+		<beans>
+			<bean id="parent" abstract="true" class="example.ComplexObject">
+				<property name="adminEmails">
+					<props>
+						<prop key="administrator">administrator@example.com</prop>
+						<prop key="support">support@example.com</prop>
+					</props>
+				</property>
+			</bean>
+			<bean id="child" parent="parent">
+				<property name="adminEmails">
+					<!-- the merge is specified on the child collection definition -->
+					<props merge="true">
+						<prop key="sales">sales@example.com</prop>
+						<prop key="support">support@example.co.uk</prop>
+					</props>
+				</property>
+			</bean>
+		<beans>
+		
+		Limitations of Collection Merging
+			You cannot merge different collection types (such as a Map and a List). If you do attempt to do so, an appropriate Exception is thrown. The merge attribute must be specified on the lower, inherited, child definition. Specifying the merge attribute on a parent collection definition is redundant and does not result in the desired merging.
+		
+
+	Null and Empty String Values
+		Spring treats empty arguments for properties and the like as empty Strings. The following XML-based configuration metadata snippet sets the email property to the empty String value ("").
+
+		<bean class="ExampleBean">
+			<property name="email" value=""/>
+		</bean>
+		The preceding example is equivalent to the following Java code:
+
+		exampleBean.setEmail("");
+		The <null/> element handles null values. The following listing shows an example:
+
+		<bean class="ExampleBean">
+			<property name="email">
+				<null/>
+			</property>
+		</bean>
+		The preceding configuration is equivalent to the following Java code:
+
+		exampleBean.setEmail(null);
+		
+	- Using depends-on
+		If a bean is a dependency of another bean, that usually means that one bean is set as a property of another. Typically you accomplish this with the <ref/> element in XML-based configuration metadata. However, sometimes dependencies between beans are less direct. An example is when a static initializer in a class needs to be triggered, such as for database driver registration. The depends-on attribute can explicitly force one or more beans to be initialized before the bean using this element is initialized. The following example uses the depends-on attribute to express a dependency on a single bean:
+
+		<bean id="beanOne" class="ExampleBean" depends-on="manager"/>
+		<bean id="manager" class="ManagerBean" />
+		To express a dependency on multiple beans, supply a list of bean names as the value of the depends-on attribute (commas, whitespace, and semicolons are valid delimiters):
+
+		<bean id="beanOne" class="ExampleBean" depends-on="manager,accountDao">
+			<property name="manager" ref="manager" />
+		</bean>
+
+		<bean id="manager" class="ManagerBean" />
+		<bean id="accountDao" class="x.y.jdbc.JdbcAccountDao" />
+		
+		NOTE :- The depends-on attribute can specify both an initialization-time dependency and, in the case of singleton beans only, a corresponding destruction-time dependency. Dependent beans that define a depends-on relationship with a given bean are destroyed first, prior to the given bean itself being destroyed. Thus, depends-on can also control shutdown orde
+		
+	- Lazy-initialized Beans
+		By default, ApplicationContext implementations eagerly create and configure all singleton beans as part of the initialization process. Generally, this pre-instantiation is desirable, because errors in the configuration or surrounding environment are discovered immediately, as opposed to hours or even days later. When this behavior is not desirable, you can prevent pre-instantiation of a singleton bean by marking the bean definition as being lazy-initialized. A lazy-initialized bean tells the IoC container to create a bean instance when it is first requested, rather than at startup.
+
+		In XML, this behavior is controlled by the lazy-init attribute on the <bean/> element, as the following example shows:
+
+		<bean id="lazy" class="com.something.ExpensiveToCreateBean" lazy-init="true"/>
+		<bean name="not.lazy" class="com.something.AnotherBean"/>
+
+		When the preceding configuration is consumed by an ApplicationContext, the lazy bean is not eagerly pre-instantiated when the ApplicationContext starts, whereas the not.lazy bean is eagerly pre-instantiated
+		You can also control lazy-initialization at the container level by using the default-lazy-init attribute on the <beans/> element, a the following example shows:
+
+		<beans default-lazy-init="true">
+			<!-- no beans will be pre-instantiated... -->
+		</beans>
+		
+	- Autowiring Collaborators
+		The Spring container can autowire relationships between collaborating beans. You can let Spring resolve collaborators (other beans) automatically for your bean by inspecting the contents of the ApplicationContext. Autowiring has the following advantages:
+
+		Autowiring can significantly reduce the need to specify properties or constructor arguments. (Other mechanisms such as a bean template discussed elsewhere in this chapter are also valuable in this regard.)
+
+		Autowiring can update a configuration as your objects evolve. For example, if you need to add a dependency to a class, that dependency can be satisfied automatically without you needing to modify the configuration. Thus autowiring can be especially useful during development, without negating the option of switching to explicit wiring when the code base becomes more stable.
+		
+		you can specify the autowire mode for a bean definition with the autowire attribute of the <bean/> element. The autowiring functionality has four modes. You specify autowiring per bean and can thus choose which ones to autowire. 
+		
+		Mode		Explanation
+		no	-- (Default) No autowiring. Bean references must be defined by ref elements. Changing the default setting is not recommended for larger deployments, because 	specifying collaborators explicitly gives greater control and clarity. To some extent, it documents the structure of a system.
+
+		byName -- Autowiring by property name. Spring looks for a bean with the same name as the property that needs to be autowired. For example, if a bean definition is set to autowire by name and it contains a master property (that is, it has a setMaster(..) method), Spring looks for a bean definition named master and uses it to set the property.
+
+		byType  -- Lets a property be autowired if exactly one bean of the property type exists in the container. If more than one exists, a fatal exception is thrown, which indicates that you may not use byType autowiring for that bean. If there are no matching beans, nothing happens (the property is not set).
+
+		constructor -- Analogous to byType but applies to constructor arguments. If there is not exactly one bean of the constructor argument type in the container, a fatal error is raised.
+		
+		With byType or constructor autowiring mode, you can wire arrays and typed collections. In such cases, all autowire candidates within the container that match the expected type are provided to satisfy the dependency. You can autowire strongly-typed Map instances if the expected key type is String. An autowired Map instance’s values consist of all bean instances that match the expected type, and the Map instance’s keys contain the corresponding bean names.
+		
+		-- Limitations and Disadvantages of Autowiring
+			1. Autowiring works best when it is used consistently across a project. If autowiring is not used in general, it might be confusing to developers to use it to wire only one or two bean definitions.
+			2. Explicit dependencies in property and constructor-arg settings always override autowiring. You cannot autowire simple properties such as primitives, Strings, and Classes (and arrays of such simple properties). This limitation is by-design.
+			3. Autowiring is less exact than explicit wiring. Although, as noted in the earlier table, Spring is careful to avoid guessing in case of ambiguity that might have unexpected results. The relationships between your Spring-managed objects are no longer documented explicitly.
+			4. Wiring information may not be available to tools that may generate documentation from a Spring container.
+			5. Multiple bean definitions within the container may match the type specified by the setter method or constructor argument to be autowired. For arrays, collections, or Map instances, this is not necessarily a problem. However, for dependencies that expect a single value, this ambiguity is not arbitrarily resolved. If no unique bean definition is available, an exception is thrown.
+	-- Excluding a Bean from Autowiring
+		On a per-bean basis, you can exclude a bean from autowiring. In Spring’s XML format, set the autowire-candidate attribute of the <bean/> element to false. The container makes that specific bean definition unavailable to the autowiring infrastructure (including annotation style configurations such as @Autowired).
+		
+		NOTE : The autowire-candidate attribute is designed to only affect type-based autowiring. It does not affect explicit references by name, which get resolved even if the specified bean is not marked as an autowire candidate. As a consequence, autowiring by name nevertheless injects a bean if the name matches.
+		
+		You can also limit autowire candidates based on pattern-matching against bean names. The top-level <beans/> element accepts one or more patterns within its default-autowire-candidates attribute. For example, to limit autowire candidate status to any bean whose name ends with Repository, provide a value of *Repository. To provide multiple patterns, define them in a comma-separated list. An explicit value of true or false for a bean definition’s autowire-candidate attribute always takes precedence. For such beans, the pattern matching rules do not apply.
+
+		These techniques are useful for beans that you never want to be injected into other beans by autowiring. It does not mean that an excluded bean cannot itself be configured by using autowiring. Rather, the bean itself is not a candidate for autowiring other beans.
+		
+	- Method Injection
+		In most application scenarios, most beans in the container are singletons. When a singleton bean needs to collaborate with another singleton bean or a non-singleton bean needs to collaborate with another non-singleton bean, you typically handle the dependency by defining one bean as a property of the other. A problem arises when the bean lifecycles are different. Suppose singleton bean A needs to use non-singleton (prototype) bean B, perhaps on each method invocation on A. The container creates the singleton bean A only once, and thus only gets one opportunity to set the properties. The container cannot provide bean A with a new instance of bean B every time one is needed.
+		
+		A solution is to forego some inversion of control. You can make bean A aware of the container by implementing the ApplicationContextAware interface, and by making a getBean("B") call to the container ask for (a typically new) bean B instance every time bean A needs it
+		
+	- Lookup Method Injection
+		Lookup method injection is the ability of the container to override methods on container-managed beans and return the lookup result for another named bean in the container. The lookup typically involves a prototype bean.
+		The Spring Framework implements this method injection by using bytecode generation from the CGLIB library to dynamically generate a subclass that overrides the method.
+		
+		NOTE : 
+		 For this dynamic subclassing to work, the class that the Spring bean container subclasses cannot be final, and the method to be overridden cannot be final, either.
+		 Unit-testing a class that has an abstract method requires you to subclass the class yourself and to supply a stub implementation of the abstract method.
+		 Concrete methods are also necessary for component scanning, which requires concrete classes to pick up.
+		 A further key limitation is that lookup methods do not work with factory methods and in particular not with @Bean methods in configuration classes, since, in that case, the container is not in charge of creating the instance and therefore cannot create a runtime-generated subclass on the fly.
+		 
+		In the client class that contains the method to be injected (the CommandManager in this case), the method to be injected requires a signature of the following form:
+		<public|protected> [abstract] <return-type> theMethodName(no-arguments);
+
+		If the method is abstract, the dynamically-generated subclass implements the method. Otherwise, the dynamically-generated subclass overrides the concrete method defined in the original class.
+		<bean id="myCommand" class="fiona.apple.AsyncCommand" scope="prototype">
+		<!-- inject dependencies here as required -->
+		</bean>
+
+		<!-- commandProcessor uses statefulCommandHelper -->
+		<bean id="commandManager" class="fiona.apple.CommandManager">
+			<lookup-method name="createCommand" bean="myCommand"/>
+		</bean>
+		
+		The bean identified as commandManager calls its own createCommand() method whenever it needs a new instance of the myCommand bean. You must be careful to deploy the myCommand bean as a prototype if that is actually what is needed. If it is a singleton, the same instance of the myCommand bean is returned each time.
+
+		Alternatively, within the annotation-based component model, you can declare a lookup method through the @Lookup annotation, as the following example shows:
+
+		public abstract class CommandManager {
+
+			public Object process(Object commandState) {
+				Command command = createCommand();
+				command.setState(commandState);
+				return command.execute();
+			}
+
+			@Lookup("myCommand")
+			protected abstract Command createCommand();
+		}
+	
+		Or, more idiomatically, you can rely on the target bean getting resolved against the declared return type of the lookup method:
+
+		public abstract class CommandManager {
+
+			public Object process(Object commandState) {
+				MyCommand command = createCommand();
+				command.setState(commandState);
+				return command.execute();
+			}
+
+			@Lookup
+			protected abstract MyCommand createCommand();
+		}
+		
+	- Arbitrary Method Replacement
+		A less useful form of method injection than lookup method injection is the ability to replace arbitrary methods in a managed bean with another method implementation. You can safely skip the rest of this section until you actually need this functionality.	
+		With XML-based configuration metadata, you can use the replaced-method element to replace an existing method implementation with another, for a deployed bean. Consider the following class, which has a method called computeValue that we want to override:
+		
+		
+	-- BEAN SCOPES
+		When you create a bean definition, you create a recipe for creating actual instances of the class defined by that bean definition. The idea that a bean definition is a recipe is important, because it means that, as with a class, you can create many object instances from a single recipe.
+		You can control not only the various dependencies and configuration values that are to be plugged into an object that is created from a particular bean definition but also control the scope of the objects created from a particular bean definition. This approach is powerful and flexible, because you can choose the scope of the objects you create through configuration instead of having to bake in the scope of an object at the Java class level. Beans can be defined to be deployed in one of a number of scopes. The Spring Framework supports six scopes, four of which are available only if you use a web-aware ApplicationContext
+		
+		Scope				Description
+		singleton	 	(Default) Scopes a single bean definition to a single object instance for each Spring IoC container.
+		prototype		Scopes a single bean definition to any number of object instances.
+		request			Scopes a single bean definition to the lifecycle of a single HTTP request. That is, each HTTP request has its own instance of a bean created off the back of a single bean definition. Only valid in the context of a web-aware Spring ApplicationContext.
+		session			Scopes a single bean definition to the lifecycle of an HTTP Session. Only valid in the context of a web-aware Spring ApplicationContext.
+		application		Scopes a single bean definition to the lifecycle of a ServletContext. Only valid in the context of a web-aware Spring ApplicationContext.
+		websocket		Scopes a single bean definition to the lifecycle of a WebSocket. Only valid in the context of a web-aware Spring ApplicationContext.
+		
+		NOTE :-  As of Spring 3.0, a thread scope is available but is not registered by default: see SimpleThreadScope. As of Spring 4.2, a transaction scope is available as well: SimpleTransactionScope. For instructions on how to register these or any other custom scopes, see Using a Custom Scope.
+		
+	-- Singleton Scope :
+		Only one shared instance of a singleton bean is managed, and all requests for beans with an ID or IDs that match that bean definition result in that one specific bean instance being returned by the Spring container.
+
+		To put it another way, when you define a bean definition and it is scoped as a singleton, the Spring IoC container creates exactly one instance of the object defined by that bean definition. This single instance is stored in a cache of such singleton beans, and all subsequent requests and references for that named bean return the cached object. The following image shows how the singleton scope works:
+		
+		The scope of the Spring singleton is best described as being per-container and per-bean. This means that, if you define one bean for a particular class in a single Spring container, the Spring container creates one and only one instance of the class defined by that bean definition. The singleton scope is the default scope in Spring. To define a bean as a singleton in XML, you can define a bean as shown in the following example:
+
+		<bean id="accountService" class="com.something.DefaultAccountService"/>
+
+		<!-- the following is equivalent, though redundant (singleton scope is the default) -->
+		<bean id="accountService" class="com.something.DefaultAccountService" scope="singleton"/>
+	
+	-- Prototype Scope :
+		The non-singleton prototype scope of bean deployment results in the creation of a new bean instance every time a request for that specific bean is made. That is, the bean is injected into another bean or you request it through a getBean() method call on the container. As a rule, you should use the prototype scope for all stateful beans and the singleton scope for stateless beans.
+		
+		<bean id="accountService" class="com.something.DefaultAccountService" scope="prototype"/>
+
+		In contrast to the other scopes, Spring does not manage the complete lifecycle of a prototype bean. The container instantiates, configures, and otherwise assembles a prototype object and hands it to the client, with no further record of that prototype instance. Thus, although initialization lifecycle callback methods are called on all objects regardless of scope, in the case of prototypes, configured destruction lifecycle callbacks are not called. The client code must clean up prototype-scoped objects and release expensive resources that the prototype beans hold. To get the Spring container to release resources held by prototype-scoped beans, try using a custom bean post-processor, which holds a reference to beans that need to be cleaned up.
+		
+	-- Singleton Beans with Prototype-bean Dependencies
+		When you use singleton-scoped beans with dependencies on prototype beans, be aware that dependencies are resolved at instantiation time. Thus, if you dependency-inject a prototype-scoped bean into a singleton-scoped bean, a new prototype bean is instantiated and then dependency-injected into the singleton bean. The prototype instance is the sole instance that is ever supplied to the singleton-scoped bean.
+
+		However, suppose you want the singleton-scoped bean to acquire a new instance of the prototype-scoped bean repeatedly at runtime. You cannot dependency-inject a prototype-scoped bean into your singleton bean, because that injection occurs only once, when the Spring container instantiates the singleton bean and resolves and injects its dependencies. If you need a new instance of a prototype bean at runtime more than once.
+		
+	-- Request, Session, Application, and WebSocket Scopes
+		The request, session, application, and websocket scopes are available only if you use a web-aware Spring ApplicationContext implementation (such as XmlWebApplicationContext). If you use these scopes with regular Spring IoC containers, such as the ClassPathXmlApplicationContext, an IllegalStateException that complains about an unknown bean scope is thrown.
+		
+		Initial Web Configuration
+		 To support the scoping of beans at the request, session, application, and websocket levels (web-scoped beans), some minor initial configuration is required before you define your beans. (This initial setup is not required for the standard scopes: singleton and prototype.)
+		 
+		If you access scoped beans within Spring Web MVC, in effect, within a request that is processed by the Spring DispatcherServlet, no special setup is necessary. DispatcherServlet already exposes all relevant state.
+		
+		If you use a Servlet 2.5 web container, with requests processed outside of Spring’s DispatcherServlet (for example, when using JSF or Struts), you need to register the org.springframework.web.context.request.RequestContextListener ServletRequestListener
+		
+		<web-app>
+			...
+			<listener>
+				<listener-class>
+					org.springframework.web.context.request.RequestContextListener
+				</listener-class>
+			</listener>
+			...
+		</web-app>
+		
+		Alternatively, if there are issues with your listener setup, consider using Spring’s RequestContextFilter. The filter mapping depends on the surrounding web application configuration, so you have to change it as appropriate. The following listing shows the filter part of a web application:
+
+		<web-app>
+			...
+			<filter>
+				<filter-name>requestContextFilter</filter-name>
+				<filter-class>org.springframework.web.filter.RequestContextFilter</filter-class>
+			</filter>
+			<filter-mapping>
+				<filter-name>requestContextFilter</filter-name>
+				<url-pattern>/*</url-pattern>
+			</filter-mapping>
+			...
+		</web-app>
+		
+		DispatcherServlet, RequestContextListener, and RequestContextFilter all do exactly the same thing, namely bind the HTTP request object to the Thread that is servicing that request. This makes beans that are request- and session-scoped available further down the call chain.
+		
+		-- Request scope
+			Consider the following XML configuration for a bean definition:
+
+			<bean id="loginAction" class="com.something.LoginAction" scope="request"/>
+		
+			When using annotation-driven components or Java configuration, the @RequestScope annotation can be used to assign a component to the request scope. The following example shows how to do so:
+
+			@RequestScope
+			@Component
+			public class LoginAction {
+				// ...
+			}
+					
+
+		-- Session Scope
+			Consider the following XML configuration for a bean definition:
+
+			<bean id="userPreferences" class="com.something.UserPreferences" scope="session"/>	
+			
+			@SessionScope
+			@Component
+			public class UserPreferences {
+				// ...
+			}
+			
+		-- Application Scope
+			Consider the following XML configuration for a bean definition:
+
+			The Spring container creates a new instance of the AppPreferences bean by using the appPreferences bean definition once for the entire web application. That is, the appPreferences bean is scoped at the ServletContext level and stored as a regular ServletContext attribute. This is somewhat similar to a Spring singleton bean but differs in two important ways: It is a singleton per ServletContext, not per Spring 'ApplicationContext' (for which there may be several in any given web application), and it is actually exposed and therefore visible as a ServletContext attribute.
+			
+			<bean id="appPreferences" class="com.something.AppPreferences" scope="application"/>
+			
+			@ApplicationScope
+			@Component
+			public class AppPreferences {
+				// ...
+			}
+			
+		-- Scoped Beans as Dependencies
+			The Spring IoC container manages not only the instantiation of your objects (beans), but also the wiring up of collaborators (or dependencies). If you want to inject (for example) an HTTP request-scoped bean into another bean of a longer-lived scope, you may choose to inject an AOP proxy in place of the scoped bean. That is, you need to inject a proxy object that exposes the same public interface as the scoped object but that can also retrieve the real target object from the relevant scope (such as an HTTP request) and delegate method calls onto the real object.	
+			
+			NOTE : --
+					
+				You may also use <aop:scoped-proxy/> between beans that are scoped as singleton, with the reference then going through an intermediate proxy that is serializable and therefore able to re-obtain the target singleton bean on deserialization.
+
+				When declaring <aop:scoped-proxy/> against a bean of scope prototype, every method call on the shared proxy leads to the creation of a new target instance to which the call is then being forwarded.
+
+				Also, scoped proxies are not the only way to access beans from shorter scopes in a lifecycle-safe fashion. You may also declare your injection point (that is, the constructor or setter argument or autowired field) as ObjectFactory<MyTargetBean>, allowing for a getObject() call to retrieve the current instance on demand every time it is needed?—?without holding on to the instance or storing it separately.
+
+				As an extended variant, you may declare ObjectProvider<MyTargetBean>, which delivers several additional access variants, including getIfAvailable and getIfUnique.
+				
+	-- Custom Scopes
+		Creating a Custom Scope
+			
+							

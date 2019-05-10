@@ -1,0 +1,11 @@
+Annotations
+@Bean
+@Configuration
+@ConstructorProperties({"years", "ultimateAnswer"})
+@Component
+@Controller
+@Lookup
+@RequestScope
+@SessionScope
+@ApplicationScope
+
