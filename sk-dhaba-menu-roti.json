@@ -1,0 +1,113 @@
+{
+    "menuItems": [
+      {
+        "roti": [
+            {
+                "itemName": "Tandori Roti",
+                "itemPrice": "13",
+                "itemCategory": "roti",
+                "itemType": "piece",
+                "itemCode": "85"
+            },
+            {
+                "itemName": "Butter Roti",
+                "itemPrice": "18",
+                "itemCategory": "roti",
+                "itemType": "piece",
+                "itemCode": "86"
+            },
+            {
+                "itemName": "Plain Naan",
+                "itemPrice": "22",
+                "itemCategory": "roti",
+                "itemType": "piece",
+                "itemCode": "87"
+            },
+            {
+                "itemName": "Butter Naan",
+                "itemPrice": "28",
+                "itemCategory": "roti",
+                "itemType": "piece",
+                "itemCode": "88"
+            },
+            {
+                "itemName": "Plain Kulcha",
+                "itemPrice": "30",
+                "itemCategory": "roti",
+                "itemType": "piece",
+                "itemCode": "89"
+            },
+            {
+                "itemName": "Butter Kulcha",
+                "itemPrice": "35",
+                "itemCategory": "roti",
+                "itemType": "piece",
+                "itemCode": "90"
+            },
+            {
+                "itemName": "Plain Parota",
+                "itemPrice": "25",
+                "itemCategory": "roti",
+                "itemType": "piece",
+                "itemCode": "91"
+            },
+            {
+                "itemName": "Butter Parota",
+                "itemPrice": "25",
+                "itemCategory": "roti",
+                "itemType": "piece",
+                "itemCode": "92"
+            },
+            {
+                "itemName": "Jawari Roti",
+                "itemPrice": "13",
+                "itemCategory": "roti",
+                "itemType": "piece",
+                "itemCode": "93"
+            },
+            {
+                "itemName": "Garlic Butter Naan",
+                "itemPrice": "35",
+                "itemCategory": "roti",
+                "itemType": "piece",
+                "itemCode": "94"
+            },
+            {
+                "itemName": "Cheese Garlic Butter Naan",
+                "itemPrice": "50",
+                "itemCategory": "roti",
+                "itemType": "piece",
+                "itemCode": "95"
+            },
+            {
+                "itemName": "Masala Roti with Butter",
+                "itemPrice": "35",
+                "itemCategory": "roti",
+                "itemType": "piece",
+                "itemCode": "96"
+            },
+            {
+                "itemName": "Paper Roti",
+                "itemPrice": "13",
+                "itemCategory": "roti",
+                "itemType": "piece",
+                "itemCode": "97"
+            },
+            {
+                "itemName": "Chapati",
+                "itemPrice": "13",
+                "itemCategory": "roti",
+                "itemType": "piece",
+                "itemCode": "98"
+            },
+            {
+                "itemName": "Chapati Butter",
+                "itemPrice": "15",
+                "itemCategory": "roti",
+                "itemType": "piece",
+                "itemCode": "99"
+            }
+        ]
+      }
+    ]
+  }
