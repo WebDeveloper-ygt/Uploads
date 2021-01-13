@@ -2,10 +2,265 @@
     "menuItems": [
       {
         "dishes": [
-         
+          {
+            "itemName": "",
+            "itemPrice": "110",
+            "itemCategory": "nonveg",
+            "itemType": "dish",
+            "itemCode": "219"
+          }
         ],
         "starters" : [
-
+          {
+            "itemName": "Chicken 65",
+            "itemPrice": "120",
+            "itemCategory": "nonveg",
+            "itemType": "snacks",
+            "itemCode": "184"
+          },
+          {
+            "itemName": "Chicken Chilly",
+            "itemPrice": "130",
+            "itemCategory": "nonveg",
+            "itemType": "snacks",
+            "itemCode": "185"
+          },
+          {
+            "itemName": "Chicken Manchurian",
+            "itemPrice": "140",
+            "itemCategory": "nonveg",
+            "itemType": "snacks",
+            "itemCode": "186"
+          },
+          {
+            "itemName": "Chicken Oil fry (7 pcs)",
+            "itemPrice": "150",
+            "itemCategory": "nonveg",
+            "itemType": "snacks",
+            "itemCode": "187"
+          },
+          {
+            "itemName": "Chicken fry",
+            "itemPrice": "100",
+            "itemCategory": "nonveg",
+            "itemType": "snacks",
+            "itemCode": "188"
+          },
+          {
+            "itemName": "Chicken Lolypop",
+            "itemPrice": "160",
+            "itemCategory": "nonveg",
+            "itemType": "snacks",
+            "itemCode": "189"
+          },
+          {
+            "itemName": "Chicken China town",
+            "itemPrice": "170",
+            "itemCategory": "nonveg",
+            "itemType": "snacks",
+            "itemCode": "190"
+          },
+          {
+            "itemName": "Chicken chilly milly",
+            "itemPrice": "160",
+            "itemCategory": "nonveg",
+            "itemType": "snacks",
+            "itemCode": "191"
+          },
+          {
+            "itemName": "Lemon Chicken (6 pcs)",
+            "itemPrice": "150",
+            "itemCategory": "nonveg",
+            "itemType": "snacks",
+            "itemCode": "192"
+          },
+          {
+            "itemName": "Chicken Coriander",
+            "itemPrice": "160",
+            "itemCategory": "nonveg",
+            "itemType": "snacks",
+            "itemCode": "193"
+          },
+          {
+            "itemName": "Chicken chinise 65",
+            "itemPrice": "130",
+            "itemCategory": "nonveg",
+            "itemType": "snacks",
+            "itemCode": "194"
+          },
+          {
+            "itemName": "Chicken Sukka",
+            "itemPrice": "100",
+            "itemCategory": "nonveg",
+            "itemType": "snacks",
+            "itemCode": "195"
+          },
+          {
+            "itemName": "Chicken Schzailt",
+            "itemPrice": "160",
+            "itemCategory": "nonveg",
+            "itemType": "snacks",
+            "itemCode": "196"
+          },
+          {
+            "itemName": "Chicken Green pan fry",
+            "itemPrice": "190",
+            "itemCategory": "nonveg",
+            "itemType": "snacks",
+            "itemCode": "197"
+          },
+          {
+            "itemName": "Chicken Dragon",
+            "itemPrice": "160",
+            "itemCategory": "nonveg",
+            "itemType": "snacks",
+            "itemCode": "198"
+          },
+          {
+            "itemName": "Egg Burji",
+            "itemPrice": "50",
+            "itemCategory": "nonveg",
+            "itemType": "snacks",
+            "itemCode": "199"
+          },
+          {
+            "itemName": "Boiled Egg",
+            "itemPrice": "25",
+            "itemCategory": "nonveg",
+            "itemType": "snacks",
+            "itemCode": "200"
+          },
+          {
+            "itemName": "Egg Omlete",
+            "itemPrice": "50",
+            "itemCategory": "nonveg",
+            "itemType": "snacks",
+            "itemCode": "201"
+          },
+          {
+            "itemName": "Egg Manchurian",
+            "itemPrice": "110",
+            "itemCategory": "nonveg",
+            "itemType": "snacks",
+            "itemCode": "202"
+          },
+          {
+            "itemName": "Egg Chilly",
+            "itemPrice": "110",
+            "itemCategory": "nonveg",
+            "itemType": "snacks",
+            "itemCode": "203"
+          },
+          {
+            "itemName": "Egg Kebab",
+            "itemPrice": "90",
+            "itemCategory": "nonveg",
+            "itemType": "snacks",
+            "itemCode": "204"
+          },
+          {
+            "itemName": "Egg Half fry",
+            "itemPrice": "50",
+            "itemCategory": "nonveg",
+            "itemType": "snacks",
+            "itemCode": "205"
+          },
+          {
+            "itemName": "Mutton Fry",
+            "itemPrice": "135",
+            "itemCategory": "nonveg",
+            "itemType": "snacks",
+            "itemCode": "206"
+          },
+          {
+            "itemName": "Mutton Sukka",
+            "itemPrice": "185",
+            "itemCategory": "nonveg",
+            "itemType": "snacks",
+            "itemCode": "207"
+          },
+          {
+            "itemName": "Mutton Chilly",
+            "itemPrice": "180",
+            "itemCategory": "nonveg",
+            "itemType": "snacks",
+            "itemCode": "208"
+          },
+          {
+            "itemName": "Mutton Manchurian",
+            "itemPrice": "200",
+            "itemCategory": "nonveg",
+            "itemType": "snacks",
+            "itemCode": "209"
+          }
+        ],
+        "tandooriSnacks":[
+          {
+            "itemName": "Chicken Green Leg (1 pcs)",
+            "itemPrice": "130",
+            "itemCategory": "nonveg",
+            "itemType": "tandooriSnacks",
+            "itemCode": "210"
+          },
+          {
+            "itemName": "Chicken Green Leg (2 pcs)",
+            "itemPrice": "250",
+            "itemCategory": "nonveg",
+            "itemType": "tandooriSnacks",
+            "itemCode": "211"
+          },
+          {
+            "itemName": "Chicken Tandoori (Half)",
+            "itemPrice": "180",
+            "itemCategory": "nonveg",
+            "itemType": "tandooriSnacks",
+            "itemCode": "212"
+          },
+          {
+            "itemName": "Chicken Tandoori (Full)",
+            "itemPrice": "320",
+            "itemCategory": "nonveg",
+            "itemType": "tandooriSnacks",
+            "itemCode": "213"
+          },
+          {
+            "itemName": "Chicken Tangdi Kebab (1 pcs)",
+            "itemPrice": "60",
+            "itemCategory": "nonveg",
+            "itemType": "tandooriSnacks",
+            "itemCode": "214"
+          },
+          {
+            "itemName": "Chicken Tangdi Kebab (2 pcs)",
+            "itemPrice": "110",
+            "itemCategory": "nonveg",
+            "itemType": "tandooriSnacks",
+            "itemCode": "215"
+          },
+          {
+            "itemName": "Chicken Tikka Kebab (6 pcs)",
+            "itemPrice": "150",
+            "itemCategory": "nonveg",
+            "itemType": "tandooriSnacks",
+            "itemCode": "216"
+          },
+          {
+            "itemName": "Chicken sholay Kebab (6pcs)",
+            "itemPrice": "160",
+            "itemCategory": "nonveg",
+            "itemType": "tandooriSnacks",
+            "itemCode": "217"
+          },
+          {
+            "itemName": "Chicken Adraki Kebab (6pcs)",
+            "itemPrice": "160",
+            "itemCategory": "nonveg",
+            "itemType": "tandooriSnacks",
+            "itemCode": "218"
+          }
+        ],
+        "fish": [
+          
         ]
       }
     ]
