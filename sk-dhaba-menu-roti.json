@@ -107,6 +107,186 @@
                 "itemType": "piece",
                 "itemCode": "99"
             }
+        ],
+        "riceItems" :[
+            {
+                "itemName": "White Rice (Half)",
+                "itemPrice": "25",
+                "itemCategory": "rice",
+                "itemType": "rice",
+                "itemCode": "50"
+            },
+            {
+                "itemName": "White Rice (Full)",
+                "itemPrice": "40",
+                "itemCategory": "rice",
+                "itemType": "rice",
+                "itemCode": "51"
+            },
+            {
+                "itemName": "Jeera Rice (Half)",
+                "itemPrice": "45",
+                "itemCategory": "rice",
+                "itemType": "rice",
+                "itemCode": "52"
+            },
+            {
+                "itemName": "Jeera Rice (Full)",
+                "itemPrice": "75",
+                "itemCategory": "rice",
+                "itemType": "rice",
+                "itemCode": "53"
+            },
+            {
+                "itemName": "Ghee Rice (Half)",
+                "itemPrice": "55",
+                "itemCategory": "rice",
+                "itemType": "rice",
+                "itemCode": "54"
+            },
+            {
+                "itemName": "Ghee Rice (Full)",
+                "itemPrice": "90",
+                "itemCategory": "rice",
+                "itemType": "rice",
+                "itemCode": "55"
+            },
+            {
+                "itemName": "Masala Rice (Half)",
+                "itemPrice": "45",
+                "itemCategory": "rice",
+                "itemType": "rice",
+                "itemCode": "56"
+            },
+            {
+                "itemName": "Masala Rice (Full)",
+                "itemPrice": "85",
+                "itemCategory": "rice",
+                "itemType": "rice",
+                "itemCode": "57"
+            },
+            {
+                "itemName": "Palak Rice",
+                "itemPrice": "90",
+                "itemCategory": "rice",
+                "itemType": "rice",
+                "itemCode": "58"
+            },
+            {
+                "itemName": "Dal Kichadi",
+                "itemPrice": "90",
+                "itemCategory": "rice",
+                "itemType": "rice",
+                "itemCode": "59"
+            },
+            {
+                "itemName": "Singapuri Rice",
+                "itemPrice": "95",
+                "itemCategory": "rice",
+                "itemType": "rice",
+                "itemCode": "60"
+            },
+            {
+                "itemName": "Veg Fried Rice",
+                "itemPrice": "110",
+                "itemCategory": "rice",
+                "itemType": "rice",
+                "itemCode": "61"
+            },
+            {
+                "itemName": "Veg Schezawan Fried Rice",
+                "itemPrice": "110",
+                "itemCategory": "rice",
+                "itemType": "rice",
+                "itemCode": "62"
+            },
+            {
+                "itemName": "Egg Fried Rice",
+                "itemPrice": "120",
+                "itemCategory": "rice",
+                "itemType": "rice",
+                "itemCode": "63"
+            },
+            {
+                "itemName": "Egg Schezawan Fried Rice",
+                "itemPrice": "120",
+                "itemCategory": "rice",
+                "itemType": "rice",
+                "itemCode": "64"
+            },
+            {
+                "itemName": "Chicken Fried Rice",
+                "itemPrice": "125",
+                "itemCategory": "rice",
+                "itemType": "rice",
+                "itemCode": "65"
+            },
+            {
+                "itemName": "Chicken Schezawan Fried Rice",
+                "itemPrice": "90",
+                "itemCategory": "rice",
+                "itemType": "rice",
+                "itemCode": "66"
+            },
+            {
+                "itemName": "Kushka Rice",
+                "itemPrice": "90",
+                "itemCategory": "rice",
+                "itemType": "rice",
+                "itemCode": "67"
+            },
+            {
+                "itemName": "Curd Rice",
+                "itemPrice": "150",
+                "itemCategory": "rice",
+                "itemType": "rice",
+                "itemCode": "68"
+            },
+            {
+                "itemName": "Veg Biryani",
+                "itemPrice": "90",
+                "itemCategory": "rice",
+                "itemType": "rice",
+                "itemCode": "69"
+            },
+            {
+                "itemName": "Mushroom Fried Rice",
+                "itemPrice": "120",
+                "itemCategory": "rice",
+                "itemType": "rice",
+                "itemCode": "70"
+            },
+            {
+                "itemName": "Mutton Fried Rice",
+                "itemPrice": "130",
+                "itemCategory": "rice",
+                "itemType": "rice",
+                "itemCode": "71"
+            },
+            {
+                "itemName": "Chicken Dum Biryani",
+                "itemPrice": "110",
+                "itemCategory": "rice",
+                "itemType": "rice",
+                "itemCode": "72"
+            },
+            {
+                "itemName": "Mutton Dum Biryani",
+                "itemPrice": "140",
+                "itemCategory": "rice",
+                "itemType": "rice",
+                "itemCode": "73"
+            },
+            {
+                "itemName": "Egg Biryani",
+                "itemPrice": "100",
+                "itemCategory": "rice",
+                "itemType": "rice",
+                "itemCode": "74"
+            }
+        ],
+        "soups": [
+            
         ]
       }
     ]
