@@ -1,333 +1,584 @@
 {
-    "menuItems": [
-      {
-        "dishes": [
-          {
-            "itemName": "Paneer Pasand",
-            "itemPrice": "170",
-            "itemCategory": "veg",
-            "itemType": "dish",
-            "itemCode": "100"
-          },
-          {
-            "itemName": "Paneer Keema",
-            "itemPrice": "140",
-            "itemCategory": "veg",
-            "itemType": "dish",
-            "itemCode": "101"
-          },
-          {
-            "itemName": "Paneer Tawa Masala",
-            "itemPrice": "230",
-            "itemCategory": "veg",
-            "itemType": "dish",
-            "itemCode": "102"
-          },
-          {
-            "itemName": "Paneer Tikka Masala",
-            "itemPrice": "170",
-            "itemCategory": "veg",
-            "itemType": "dish",
-            "itemCode": "103"
-          },
-          {
-            "itemName": "Paneer Mutter",
-            "itemPrice": "120",
-            "itemCategory": "veg",
-            "itemType": "dish",
-            "itemCode": "104"
-          },
-          {
-            "itemName": "Mushroom Masala",
-            "itemPrice": "130",
-            "itemCategory": "veg",
-            "itemType": "dish",
-            "itemCode": "105"
-          },
-          {
-            "itemName": "Mushroom Kolhapuri",
-            "itemPrice": "140",
-            "itemCategory": "veg",
-            "itemType": "dish",
-            "itemCode": "106"
-          },
-          {
-            "itemName": "Mushroom Hydrabadi",
-            "itemPrice": "150",
-            "itemCategory": "veg",
-            "itemType": "dish",
-            "itemCode": "107"
-          },
-          {
-            "itemName": "Capsicum Masala",
-            "itemPrice": "100",
-            "itemCategory": "veg",
-            "itemType": "dish",
-            "itemCode": "108"
-          },
-          {
-            "itemName": "Tomato Fry",
-            "itemPrice": "90",
-            "itemCategory": "veg",
-            "itemType": "dish",
-            "itemCode": "109"
-          },
-          {
-            "itemName": "Aloo Mutter",
-            "itemPrice": "100",
-            "itemCategory": "veg",
-            "itemType": "dish",
-            "itemCode": "110"
-          },
-          {
-            "itemName": "Sk Special Dish",
-            "itemPrice": "240",
-            "itemCategory": "veg",
-            "itemType": "dish",
-            "itemCode": "111"
-          },
-          {
-            "itemName": "Dal Fry",
-            "itemPrice": "75",
-            "itemCategory": "veg",
-            "itemType": "dish",
-            "itemCode": "112"
-          },
-          {
-            "itemName": "Dal Tadka",
-            "itemPrice": "85",
-            "itemCategory": "veg",
-            "itemType": "dish",
-            "itemCode": "113"
-          },
-          {
-            "itemName": "Dal Kolhapuri",
-            "itemPrice": "85",
-            "itemCategory": "veg",
-            "itemType": "dish",
-            "itemCode": "114"
-          },
-          {
-            "itemName": "Dal Butter Masala",
-            "itemPrice": "100",
-            "itemCategory": "veg",
-            "itemType": "dish",
-            "itemCode": "115"
-          },
-          {
-            "itemName": "Palne Dal",
-            "itemPrice": "70",
-            "itemCategory": "veg",
-            "itemType": "dish",
-            "itemCode": "116"
-          },
-          {
-            "itemName": "Mix Veg",
-            "itemPrice": "110",
-            "itemCategory": "veg",
-            "itemType": "dish",
-            "itemCode": "117"
-          },
-          {
-            "itemName": "Veg Kolhapuri",
-            "itemPrice": "110",
-            "itemCategory": "veg",
-            "itemType": "dish",
-            "itemCode": "118"
-          },
-          {
-            "itemName": "Veg Butter Masala",
-            "itemPrice": "120",
-            "itemCategory": "veg",
-            "itemType": "dish",
-            "itemCode": "119"
-          },
-          {
-            "itemName": "Veg Kadai",
-            "itemPrice": "130",
-            "itemCategory": "veg",
-            "itemType": "dish",
-            "itemCode": "120"
-          },
-          {
-            "itemName": "Veg Handi - Full",
-            "itemPrice": "310",
-            "itemCategory": "veg",
-            "itemType": "dish",
-            "itemCode": "121"
-          },
-          {
-            "itemName": "Veg Buna Masala",
-            "itemPrice": "160",
-            "itemCategory": "veg",
-            "itemType": "dish",
-            "itemCode": "122"
-          },
-          {
-            "itemName": "Veg Handi - Half",
-            "itemPrice": "170",
-            "itemCategory": "veg",
-            "itemType": "dish",
-            "itemCode": "123"
-          },
-          {
-            "itemName": "Veg Hangama",
-            "itemPrice": "145",
-            "itemCategory": "veg",
-            "itemType": "dish",
-            "itemCode": "124"
-          },
-          {
-            "itemName": "Veg Patiala",
-            "itemPrice": "170",
-            "itemCategory": "veg",
-            "itemType": "dish",
-            "itemCode": "125"
-          },
-          {
-            "itemName": "Veg Hydrabadi",
-            "itemPrice": "130",
-            "itemCategory": "veg",
-            "itemType": "dish",
-            "itemCode": "126"
-          },
-          {
-            "itemName": "Veg Keema",
-            "itemPrice": "120",
-            "itemCategory": "veg",
-            "itemType": "dish",
-            "itemCode": "127"
-          },
-          {
-            "itemName": "Veg Tawa Masala",
-            "itemPrice": "230",
-            "itemCategory": "veg",
-            "itemType": "dish",
-            "itemCode": "128"
-          },
-          {
-            "itemName": "Veg Diwani",
-            "itemPrice": "110",
-            "itemCategory": "veg",
-            "itemType": "dish",
-            "itemCode": "129"
-          },
-          {
-            "itemName": "Kaju Masala",
-            "itemPrice": "135",
-            "itemCategory": "veg",
-            "itemType": "dish",
-            "itemCode": "130"
-          },
-          {
-            "itemName": "Kaju Kolhapuri",
-            "itemPrice": "140",
-            "itemCategory": "veg",
-            "itemType": "dish",
-            "itemCode": "131"
-          },
-          {
-            "itemName": "Kaju Butter Masala",
-            "itemPrice": "150",
-            "itemCategory": "veg",
-            "itemType": "dish",
-            "itemCode": "132"
-          },
-          {
-            "itemName": "Kaju Kadai",
-            "itemPrice": "160",
-            "itemCategory": "veg",
-            "itemType": "dish",
-            "itemCode": "133"
-          },
-          {
-            "itemName": "Kaju Tawa Masala",
-            "itemPrice": "250",
-            "itemCategory": "veg",
-            "itemType": "dish",
-            "itemCode": "132"
-          },
-          {
-            "itemName": "Kaju Hydrabadi",
-            "itemPrice": "140",
-            "itemCategory": "veg",
-            "itemType": "dish",
-            "itemCode": "133"
-          },
-          {
-            "itemName": "Kaju Paneer Masala",
-            "itemPrice": "145",
-            "itemCategory": "veg",
-            "itemType": "dish",
-            "itemCode": "134"
-          },
-          {
-            "itemName": "Kaju Paneer Kolhapuri",
-            "itemPrice": "150",
-            "itemCategory": "veg",
-            "itemType": "dish",
-            "itemCode": "135"
-          },
-          {
-            "itemName": "Kaju Paneer Butter Masala",
-            "itemPrice": "160",
-            "itemCategory": "veg",
-            "itemType": "dish",
-            "itemCode": "136"
-          },
-          {
-            "itemName": "Kaju Paneer Hydrabadi",
-            "itemPrice": "155",
-            "itemCategory": "veg",
-            "itemType": "dish",
-            "itemCode": "137"
-          },
-          {
-            "itemName": "Paneer Masala",
-            "itemPrice": "120",
-            "itemCategory": "veg",
-            "itemType": "dish",
-            "itemCode": "138"
-          },
-          {
-            "itemName": "Paneer Kolhapuri",
-            "itemPrice": "120",
-            "itemCategory": "veg",
-            "itemType": "dish",
-            "itemCode": "139"
-          },
-          {
-            "itemName": "Paneer Butter Masala",
-            "itemPrice": "140",
-            "itemCategory": "veg",
-            "itemType": "dish",
-            "itemCode": "140"
-          },
-          {
-            "itemName": "Paneer Hydrabadi",
-            "itemPrice": "130",
-            "itemCategory": "veg",
-            "itemType": "dish",
-            "itemCode": "141"
-          },
-          {
-            "itemName": "Palak Paneer",
-            "itemPrice": "120",
-            "itemCategory": "veg",
-            "itemType": "dish",
-            "itemCode": "142"
-          },
-          {
-            "itemName": "Plane Palak",
-            "itemPrice": "90",
-            "itemCategory": "veg",
-            "itemType": "dish",
-            "itemCode": "143"
-          }
-        ],
-        "starters" : [
-
-        ]
-      }
-    ]
-  }
+  "menuItems": [
+    {
+      "dishes": [
+        {
+          "itemName": "Paneer Pasand",
+          "itemPrice": "170",
+          "itemCategory": "veg",
+          "itemType": "dish",
+          "itemCode": "100"
+        },
+        {
+          "itemName": "Paneer Keema",
+          "itemPrice": "140",
+          "itemCategory": "veg",
+          "itemType": "dish",
+          "itemCode": "101"
+        },
+        {
+          "itemName": "Paneer Tawa Masala",
+          "itemPrice": "230",
+          "itemCategory": "veg",
+          "itemType": "dish",
+          "itemCode": "102"
+        },
+        {
+          "itemName": "Paneer Tikka Masala",
+          "itemPrice": "170",
+          "itemCategory": "veg",
+          "itemType": "dish",
+          "itemCode": "103"
+        },
+        {
+          "itemName": "Paneer Mutter",
+          "itemPrice": "120",
+          "itemCategory": "veg",
+          "itemType": "dish",
+          "itemCode": "104"
+        },
+        {
+          "itemName": "Mushroom Masala",
+          "itemPrice": "130",
+          "itemCategory": "veg",
+          "itemType": "dish",
+          "itemCode": "105"
+        },
+        {
+          "itemName": "Mushroom Kolhapuri",
+          "itemPrice": "140",
+          "itemCategory": "veg",
+          "itemType": "dish",
+          "itemCode": "106"
+        },
+        {
+          "itemName": "Mushroom Hydrabadi",
+          "itemPrice": "150",
+          "itemCategory": "veg",
+          "itemType": "dish",
+          "itemCode": "107"
+        },
+        {
+          "itemName": "Capsicum Masala",
+          "itemPrice": "100",
+          "itemCategory": "veg",
+          "itemType": "dish",
+          "itemCode": "108"
+        },
+        {
+          "itemName": "Tomato Fry",
+          "itemPrice": "90",
+          "itemCategory": "veg",
+          "itemType": "dish",
+          "itemCode": "109"
+        },
+        {
+          "itemName": "Aloo Mutter",
+          "itemPrice": "100",
+          "itemCategory": "veg",
+          "itemType": "dish",
+          "itemCode": "110"
+        },
+        {
+          "itemName": "Sk Special Dish",
+          "itemPrice": "240",
+          "itemCategory": "veg",
+          "itemType": "dish",
+          "itemCode": "111"
+        },
+        {
+          "itemName": "Dal Fry",
+          "itemPrice": "75",
+          "itemCategory": "veg",
+          "itemType": "dish",
+          "itemCode": "112"
+        },
+        {
+          "itemName": "Dal Tadka",
+          "itemPrice": "85",
+          "itemCategory": "veg",
+          "itemType": "dish",
+          "itemCode": "113"
+        },
+        {
+          "itemName": "Dal Kolhapuri",
+          "itemPrice": "85",
+          "itemCategory": "veg",
+          "itemType": "dish",
+          "itemCode": "114"
+        },
+        {
+          "itemName": "Dal Butter Masala",
+          "itemPrice": "100",
+          "itemCategory": "veg",
+          "itemType": "dish",
+          "itemCode": "115"
+        },
+        {
+          "itemName": "Palne Dal",
+          "itemPrice": "70",
+          "itemCategory": "veg",
+          "itemType": "dish",
+          "itemCode": "116"
+        },
+        {
+          "itemName": "Mix Veg",
+          "itemPrice": "110",
+          "itemCategory": "veg",
+          "itemType": "dish",
+          "itemCode": "117"
+        },
+        {
+          "itemName": "Veg Kolhapuri",
+          "itemPrice": "110",
+          "itemCategory": "veg",
+          "itemType": "dish",
+          "itemCode": "118"
+        },
+        {
+          "itemName": "Veg Butter Masala",
+          "itemPrice": "120",
+          "itemCategory": "veg",
+          "itemType": "dish",
+          "itemCode": "119"
+        },
+        {
+          "itemName": "Veg Kadai",
+          "itemPrice": "130",
+          "itemCategory": "veg",
+          "itemType": "dish",
+          "itemCode": "120"
+        },
+        {
+          "itemName": "Veg Handi - Full",
+          "itemPrice": "310",
+          "itemCategory": "veg",
+          "itemType": "dish",
+          "itemCode": "121"
+        },
+        {
+          "itemName": "Veg Buna Masala",
+          "itemPrice": "160",
+          "itemCategory": "veg",
+          "itemType": "dish",
+          "itemCode": "122"
+        },
+        {
+          "itemName": "Veg Handi - Half",
+          "itemPrice": "170",
+          "itemCategory": "veg",
+          "itemType": "dish",
+          "itemCode": "123"
+        },
+        {
+          "itemName": "Veg Hangama",
+          "itemPrice": "145",
+          "itemCategory": "veg",
+          "itemType": "dish",
+          "itemCode": "124"
+        },
+        {
+          "itemName": "Veg Patiala",
+          "itemPrice": "170",
+          "itemCategory": "veg",
+          "itemType": "dish",
+          "itemCode": "125"
+        },
+        {
+          "itemName": "Veg Hydrabadi",
+          "itemPrice": "130",
+          "itemCategory": "veg",
+          "itemType": "dish",
+          "itemCode": "126"
+        },
+        {
+          "itemName": "Veg Keema",
+          "itemPrice": "120",
+          "itemCategory": "veg",
+          "itemType": "dish",
+          "itemCode": "127"
+        },
+        {
+          "itemName": "Veg Tawa Masala",
+          "itemPrice": "230",
+          "itemCategory": "veg",
+          "itemType": "dish",
+          "itemCode": "128"
+        },
+        {
+          "itemName": "Veg Diwani",
+          "itemPrice": "110",
+          "itemCategory": "veg",
+          "itemType": "dish",
+          "itemCode": "129"
+        },
+        {
+          "itemName": "Kaju Masala",
+          "itemPrice": "135",
+          "itemCategory": "veg",
+          "itemType": "dish",
+          "itemCode": "130"
+        },
+        {
+          "itemName": "Kaju Kolhapuri",
+          "itemPrice": "140",
+          "itemCategory": "veg",
+          "itemType": "dish",
+          "itemCode": "131"
+        },
+        {
+          "itemName": "Kaju Butter Masala",
+          "itemPrice": "150",
+          "itemCategory": "veg",
+          "itemType": "dish",
+          "itemCode": "132"
+        },
+        {
+          "itemName": "Kaju Kadai",
+          "itemPrice": "160",
+          "itemCategory": "veg",
+          "itemType": "dish",
+          "itemCode": "133"
+        },
+        {
+          "itemName": "Kaju Tawa Masala",
+          "itemPrice": "250",
+          "itemCategory": "veg",
+          "itemType": "dish",
+          "itemCode": "132"
+        },
+        {
+          "itemName": "Kaju Hydrabadi",
+          "itemPrice": "140",
+          "itemCategory": "veg",
+          "itemType": "dish",
+          "itemCode": "133"
+        },
+        {
+          "itemName": "Kaju Paneer Masala",
+          "itemPrice": "145",
+          "itemCategory": "veg",
+          "itemType": "dish",
+          "itemCode": "134"
+        },
+        {
+          "itemName": "Kaju Paneer Kolhapuri",
+          "itemPrice": "150",
+          "itemCategory": "veg",
+          "itemType": "dish",
+          "itemCode": "135"
+        },
+        {
+          "itemName": "Kaju Paneer Butter Masala",
+          "itemPrice": "160",
+          "itemCategory": "veg",
+          "itemType": "dish",
+          "itemCode": "136"
+        },
+        {
+          "itemName": "Kaju Paneer Hydrabadi",
+          "itemPrice": "155",
+          "itemCategory": "veg",
+          "itemType": "dish",
+          "itemCode": "137"
+        },
+        {
+          "itemName": "Paneer Masala",
+          "itemPrice": "120",
+          "itemCategory": "veg",
+          "itemType": "dish",
+          "itemCode": "138"
+        },
+        {
+          "itemName": "Paneer Kolhapuri",
+          "itemPrice": "120",
+          "itemCategory": "veg",
+          "itemType": "dish",
+          "itemCode": "139"
+        },
+        {
+          "itemName": "Paneer Butter Masala",
+          "itemPrice": "140",
+          "itemCategory": "veg",
+          "itemType": "dish",
+          "itemCode": "140"
+        },
+        {
+          "itemName": "Paneer Hydrabadi",
+          "itemPrice": "130",
+          "itemCategory": "veg",
+          "itemType": "dish",
+          "itemCode": "141"
+        },
+        {
+          "itemName": "Palak Paneer",
+          "itemPrice": "120",
+          "itemCategory": "veg",
+          "itemType": "dish",
+          "itemCode": "142"
+        },
+        {
+          "itemName": "Plane Palak",
+          "itemPrice": "90",
+          "itemCategory": "veg",
+          "itemType": "dish",
+          "itemCode": "143"
+        }
+      ],
+      "starters" : [
+        {
+          "itemName": "Gobi Manchurian",
+          "itemPrice": "80",
+          "itemCategory": "veg",
+          "itemType": "starters",
+          "itemCode": "144"
+        },
+        {
+          "itemName": "Gobi 65",
+          "itemPrice": "75",
+          "itemCategory": "veg",
+          "itemType": "starters",
+          "itemCode": "145"
+        },
+        {
+          "itemName": "Gobi Chilly",
+          "itemPrice": "80",
+          "itemCategory": "veg",
+          "itemType": "starters",
+          "itemCode": "150"
+        },
+        {
+          "itemName": "Veg Machurian",
+          "itemPrice": "115",
+          "itemCategory": "veg",
+          "itemType": "starters",
+          "itemCode": "151"
+        },
+        {
+          "itemName": "Panner Buriji",
+          "itemPrice": "120",
+          "itemCategory": "veg",
+          "itemType": "starters",
+          "itemCode": "152"
+        },
+        {
+          "itemName": "Panner Manchurian",
+          "itemPrice": "170",
+          "itemCategory": "veg",
+          "itemType": "starters",
+          "itemCode": "153"
+        },
+        {
+          "itemName": "Panner Chilly",
+          "itemPrice": "175",
+          "itemCategory": "veg",
+          "itemType": "starters",
+          "itemCode": "154"
+        },
+        {
+          "itemName": "Panner 65",
+          "itemPrice": "130",
+          "itemCategory": "veg",
+          "itemType": "starters",
+          "itemCode": "155"
+        },
+        {
+          "itemName": "Panner Chilly Milly",
+          "itemPrice": "175",
+          "itemCategory": "veg",
+          "itemType": "starters",
+          "itemCode": "156"
+        },
+        {
+          "itemName": "Panner Tikka",
+          "itemPrice": "175",
+          "itemCategory": "veg",
+          "itemType": "starters",
+          "itemCode": "157"
+        },
+        {
+          "itemName": "Onion Pakoda",
+          "itemPrice": "70",
+          "itemCategory": "veg",
+          "itemType": "starters",
+          "itemCode": "158"
+        },
+        {
+          "itemName": "Onion Ring Pakoda",
+          "itemPrice": "75",
+          "itemCategory": "veg",
+          "itemType": "starters",
+          "itemCode": "159"
+        },
+        {
+          "itemName": "Masala Papad",
+          "itemPrice": "40",
+          "itemCategory": "veg",
+          "itemType": "starters",
+          "itemCode": "160"
+        },
+        {
+          "itemName": "Roasted Papad",
+          "itemPrice": "20",
+          "itemCategory": "veg",
+          "itemType": "starters",
+          "itemCode": "161"
+        },
+        {
+          "itemName": "Fry Papad",
+          "itemPrice": "25",
+          "itemCategory": "veg",
+          "itemType": "starters",
+          "itemCode": "162"
+        },
+        {
+          "itemName": "Chilly Fry",
+          "itemPrice": "30",
+          "itemCategory": "veg",
+          "itemType": "starters",
+          "itemCode": "163"
+        },
+        {
+          "itemName": "Green Salad",
+          "itemPrice": "70",
+          "itemCategory": "veg",
+          "itemType": "starters",
+          "itemCode": "164"
+        },
+        {
+          "itemName": "Boiled Shenga",
+          "itemPrice": "25",
+          "itemCategory": "veg",
+          "itemType": "starters",
+          "itemCode": "165"
+        },
+        {
+          "itemName": "Maharaja Shenga",
+          "itemPrice": "60",
+          "itemCategory": "veg",
+          "itemType": "starters",
+          "itemCode": "166"
+        },
+        {
+          "itemName": "Finger Chips",
+          "itemPrice": "75",
+          "itemCategory": "veg",
+          "itemType": "starters",
+          "itemCode": "167"
+        },
+        {
+          "itemName": "Kaju Fry",
+          "itemPrice": "80",
+          "itemCategory": "veg",
+          "itemType": "starters",
+          "itemCode": "168"
+        },
+        {
+          "itemName": "Veg Chilly Milly",
+          "itemPrice": "120",
+          "itemCategory": "veg",
+          "itemType": "starters",
+          "itemCode": "169"
+        },
+        {
+          "itemName": "Veg Harabara Kabab",
+          "itemPrice": "150",
+          "itemCategory": "veg",
+          "itemType": "starters",
+          "itemCode": "170"
+        },
+        {
+          "itemName": "Veg Crispy",
+          "itemPrice": "130",
+          "itemCategory": "veg",
+          "itemType": "starters",
+          "itemCode": "171"
+        },
+        {
+          "itemName": "Veg Spring Roll (10 pcs)",
+          "itemPrice": "160",
+          "itemCategory": "veg",
+          "itemType": "starters",
+          "itemCode": "172"
+        },
+        {
+          "itemName": "Mushroom Chilly",
+          "itemPrice": "130",
+          "itemCategory": "veg",
+          "itemType": "starters",
+          "itemCode": "173"
+        },
+        {
+          "itemName": "Mushroom Manchurian",
+          "itemPrice": "140",
+          "itemCategory": "veg",
+          "itemType": "starters",
+          "itemCode": "174"
+        },
+        {
+          "itemName": "Mushroom Tandoori",
+          "itemPrice": "170",
+          "itemCategory": "veg",
+          "itemType": "starters",
+          "itemCode": "175"
+        },
+        {
+          "itemName": "Baby Corn Chilly",
+          "itemPrice": "140",
+          "itemCategory": "veg",
+          "itemType": "starters",
+          "itemCode": "176"
+        },
+        {
+          "itemName": "Baby Corn Manchurian",
+          "itemPrice": "150",
+          "itemCategory": "veg",
+          "itemType": "starters",
+          "itemCode": "177"
+        },
+        {
+          "itemName": "Veg S.K Special",
+          "itemPrice": "175",
+          "itemCategory": "veg",
+          "itemType": "starters",
+          "itemCode": "178"
+        },
+        {
+          "itemName": "Gobi Schezwan",
+          "itemPrice": "90",
+          "itemCategory": "veg",
+          "itemType": "starters",
+          "itemCode": "179"
+        },
+        {
+          "itemName": "Green Peas",
+          "itemPrice": "80",
+          "itemCategory": "veg",
+          "itemType": "starters",
+          "itemCode": "180"
+        },
+        {
+          "itemName": "Veg Schzault",
+          "itemPrice": "125",
+          "itemCategory": "veg",
+          "itemType": "starters",
+          "itemCode": "181"
+        },
+        {
+          "itemName": "Salt Shenga",
+          "itemPrice": "30",
+          "itemCategory": "veg",
+          "itemType": "starters",
+          "itemCode": "182"
+        },
+        {
+          "itemName": "Masala Shenga",
+          "itemPrice": "40",
+          "itemCategory": "veg",
+          "itemType": "starters",
+          "itemCode": "183"
+        }
+      ]
+    }
+  ]
+}
