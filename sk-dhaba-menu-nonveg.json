@@ -15,182 +15,182 @@
             "itemName": "Chicken 65",
             "itemPrice": "120",
             "itemCategory": "nonveg",
-            "itemType": "snacks",
+            "itemType": "Starters",
             "itemCode": "184"
           },
           {
             "itemName": "Chicken Chilly",
             "itemPrice": "130",
             "itemCategory": "nonveg",
-            "itemType": "snacks",
+            "itemType": "Starters",
             "itemCode": "185"
           },
           {
             "itemName": "Chicken Manchurian",
             "itemPrice": "140",
             "itemCategory": "nonveg",
-            "itemType": "snacks",
+            "itemType": "Starters",
             "itemCode": "186"
           },
           {
             "itemName": "Chicken Oil fry (7 pcs)",
             "itemPrice": "150",
             "itemCategory": "nonveg",
-            "itemType": "snacks",
+            "itemType": "Starters",
             "itemCode": "187"
           },
           {
             "itemName": "Chicken fry",
             "itemPrice": "100",
             "itemCategory": "nonveg",
-            "itemType": "snacks",
+            "itemType": "Starters",
             "itemCode": "188"
           },
           {
             "itemName": "Chicken Lolypop",
             "itemPrice": "160",
             "itemCategory": "nonveg",
-            "itemType": "snacks",
+            "itemType": "Starters",
             "itemCode": "189"
           },
           {
             "itemName": "Chicken China town",
             "itemPrice": "170",
             "itemCategory": "nonveg",
-            "itemType": "snacks",
+            "itemType": "Starters",
             "itemCode": "190"
           },
           {
             "itemName": "Chicken chilly milly",
             "itemPrice": "160",
             "itemCategory": "nonveg",
-            "itemType": "snacks",
+            "itemType": "Starters",
             "itemCode": "191"
           },
           {
             "itemName": "Lemon Chicken (6 pcs)",
             "itemPrice": "150",
             "itemCategory": "nonveg",
-            "itemType": "snacks",
+            "itemType": "Starters",
             "itemCode": "192"
           },
           {
             "itemName": "Chicken Coriander",
             "itemPrice": "160",
             "itemCategory": "nonveg",
-            "itemType": "snacks",
+            "itemType": "Starters",
             "itemCode": "193"
           },
           {
             "itemName": "Chicken chinise 65",
             "itemPrice": "130",
             "itemCategory": "nonveg",
-            "itemType": "snacks",
+            "itemType": "Starters",
             "itemCode": "194"
           },
           {
             "itemName": "Chicken Sukka",
             "itemPrice": "100",
             "itemCategory": "nonveg",
-            "itemType": "snacks",
+            "itemType": "Starters",
             "itemCode": "195"
           },
           {
             "itemName": "Chicken Schzailt",
             "itemPrice": "160",
             "itemCategory": "nonveg",
-            "itemType": "snacks",
+            "itemType": "Starters",
             "itemCode": "196"
           },
           {
             "itemName": "Chicken Green pan fry",
             "itemPrice": "190",
             "itemCategory": "nonveg",
-            "itemType": "snacks",
+            "itemType": "Starters",
             "itemCode": "197"
           },
           {
             "itemName": "Chicken Dragon",
             "itemPrice": "160",
             "itemCategory": "nonveg",
-            "itemType": "snacks",
+            "itemType": "Starters",
             "itemCode": "198"
           },
           {
             "itemName": "Egg Burji",
             "itemPrice": "50",
             "itemCategory": "nonveg",
-            "itemType": "snacks",
+            "itemType": "Starters",
             "itemCode": "199"
           },
           {
             "itemName": "Boiled Egg",
             "itemPrice": "25",
             "itemCategory": "nonveg",
-            "itemType": "snacks",
+            "itemType": "Starters",
             "itemCode": "200"
           },
           {
             "itemName": "Egg Omlete",
             "itemPrice": "50",
             "itemCategory": "nonveg",
-            "itemType": "snacks",
+            "itemType": "Starters",
             "itemCode": "201"
           },
           {
             "itemName": "Egg Manchurian",
             "itemPrice": "110",
             "itemCategory": "nonveg",
-            "itemType": "snacks",
+            "itemType": "Starters",
             "itemCode": "202"
           },
           {
             "itemName": "Egg Chilly",
             "itemPrice": "110",
             "itemCategory": "nonveg",
-            "itemType": "snacks",
+            "itemType": "Starters",
             "itemCode": "203"
           },
           {
             "itemName": "Egg Kebab",
             "itemPrice": "90",
             "itemCategory": "nonveg",
-            "itemType": "snacks",
+            "itemType": "Starters",
             "itemCode": "204"
           },
           {
             "itemName": "Egg Half fry",
             "itemPrice": "50",
             "itemCategory": "nonveg",
-            "itemType": "snacks",
+            "itemType": "Starters",
             "itemCode": "205"
           },
           {
             "itemName": "Mutton Fry",
             "itemPrice": "135",
             "itemCategory": "nonveg",
-            "itemType": "snacks",
+            "itemType": "Starters",
             "itemCode": "206"
           },
           {
             "itemName": "Mutton Sukka",
             "itemPrice": "185",
             "itemCategory": "nonveg",
-            "itemType": "snacks",
+            "itemType": "Starters",
             "itemCode": "207"
           },
           {
             "itemName": "Mutton Chilly",
             "itemPrice": "180",
             "itemCategory": "nonveg",
-            "itemType": "snacks",
+            "itemType": "Starters",
             "itemCode": "208"
           },
           {
             "itemName": "Mutton Manchurian",
             "itemPrice": "200",
             "itemCategory": "nonveg",
-            "itemType": "snacks",
+            "itemType": "Starters",
             "itemCode": "209"
           }
         ],
@@ -260,7 +260,7 @@
           }
         ],
         "fish": [
-          
+
         ]
       }
     ]
