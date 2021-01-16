@@ -199,63 +199,63 @@
             "itemName": "Chicken Green Leg (1 pcs)",
             "itemPrice": "130",
             "itemCategory": "nonveg",
-            "itemType": "tandooriSnacks",
+            "itemType": "Tandoori Snacks",
             "itemCode": "210"
           },
           {
             "itemName": "Chicken Green Leg (2 pcs)",
             "itemPrice": "250",
             "itemCategory": "nonveg",
-            "itemType": "tandooriSnacks",
+            "itemType": "Tandoori Snacks",
             "itemCode": "211"
           },
           {
             "itemName": "Chicken Tandoori (Half)",
             "itemPrice": "180",
             "itemCategory": "nonveg",
-            "itemType": "tandooriSnacks",
+            "itemType": "Tandoori Snacks",
             "itemCode": "212"
           },
           {
             "itemName": "Chicken Tandoori (Full)",
             "itemPrice": "320",
             "itemCategory": "nonveg",
-            "itemType": "tandooriSnacks",
+            "itemType": "Tandoori Snacks",
             "itemCode": "213"
           },
           {
             "itemName": "Chicken Tangdi Kebab (1 pcs)",
             "itemPrice": "60",
             "itemCategory": "nonveg",
-            "itemType": "tandooriSnacks",
+            "itemType": "Tandoori Snacks",
             "itemCode": "214"
           },
           {
             "itemName": "Chicken Tangdi Kebab (2 pcs)",
             "itemPrice": "110",
             "itemCategory": "nonveg",
-            "itemType": "tandooriSnacks",
+            "itemType": "Tandoori Snacks",
             "itemCode": "215"
           },
           {
             "itemName": "Chicken Tikka Kebab (6 pcs)",
             "itemPrice": "150",
             "itemCategory": "nonveg",
-            "itemType": "tandooriSnacks",
+            "itemType": "Tandoori Snacks",
             "itemCode": "216"
           },
           {
             "itemName": "Chicken sholay Kebab (6pcs)",
             "itemPrice": "160",
             "itemCategory": "nonveg",
-            "itemType": "tandooriSnacks",
+            "itemType": "Tandoori Snacks",
             "itemCode": "217"
           },
           {
             "itemName": "Chicken Adraki Kebab (6pcs)",
             "itemPrice": "160",
             "itemCategory": "nonveg",
-            "itemType": "tandooriSnacks",
+            "itemType": "Tandoori Snacks",
             "itemCode": "218"
           }
         ],
