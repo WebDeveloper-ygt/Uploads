@@ -1,267 +1,524 @@
 {
-    "menuItems": [
-      {
-        "dishes": [
-          {
-            "itemName": "",
-            "itemPrice": "110",
-            "itemCategory": "nonveg",
-            "itemType": "dish",
-            "itemCode": "219"
-          }
-        ],
-        "starters" : [
-          {
-            "itemName": "Chicken 65",
-            "itemPrice": "120",
-            "itemCategory": "nonveg",
-            "itemType": "Starters",
-            "itemCode": "184"
-          },
-          {
-            "itemName": "Chicken Chilly",
-            "itemPrice": "130",
-            "itemCategory": "nonveg",
-            "itemType": "Starters",
-            "itemCode": "185"
-          },
-          {
-            "itemName": "Chicken Manchurian",
-            "itemPrice": "140",
-            "itemCategory": "nonveg",
-            "itemType": "Starters",
-            "itemCode": "186"
-          },
-          {
-            "itemName": "Chicken Oil fry (7 pcs)",
-            "itemPrice": "150",
-            "itemCategory": "nonveg",
-            "itemType": "Starters",
-            "itemCode": "187"
-          },
-          {
-            "itemName": "Chicken fry",
-            "itemPrice": "100",
-            "itemCategory": "nonveg",
-            "itemType": "Starters",
-            "itemCode": "188"
-          },
-          {
-            "itemName": "Chicken Lolypop",
-            "itemPrice": "160",
-            "itemCategory": "nonveg",
-            "itemType": "Starters",
-            "itemCode": "189"
-          },
-          {
-            "itemName": "Chicken China town",
-            "itemPrice": "170",
-            "itemCategory": "nonveg",
-            "itemType": "Starters",
-            "itemCode": "190"
-          },
-          {
-            "itemName": "Chicken chilly milly",
-            "itemPrice": "160",
-            "itemCategory": "nonveg",
-            "itemType": "Starters",
-            "itemCode": "191"
-          },
-          {
-            "itemName": "Lemon Chicken (6 pcs)",
-            "itemPrice": "150",
-            "itemCategory": "nonveg",
-            "itemType": "Starters",
-            "itemCode": "192"
-          },
-          {
-            "itemName": "Chicken Coriander",
-            "itemPrice": "160",
-            "itemCategory": "nonveg",
-            "itemType": "Starters",
-            "itemCode": "193"
-          },
-          {
-            "itemName": "Chicken chinise 65",
-            "itemPrice": "130",
-            "itemCategory": "nonveg",
-            "itemType": "Starters",
-            "itemCode": "194"
-          },
-          {
-            "itemName": "Chicken Sukka",
-            "itemPrice": "100",
-            "itemCategory": "nonveg",
-            "itemType": "Starters",
-            "itemCode": "195"
-          },
-          {
-            "itemName": "Chicken Schzailt",
-            "itemPrice": "160",
-            "itemCategory": "nonveg",
-            "itemType": "Starters",
-            "itemCode": "196"
-          },
-          {
-            "itemName": "Chicken Green pan fry",
-            "itemPrice": "190",
-            "itemCategory": "nonveg",
-            "itemType": "Starters",
-            "itemCode": "197"
-          },
-          {
-            "itemName": "Chicken Dragon",
-            "itemPrice": "160",
-            "itemCategory": "nonveg",
-            "itemType": "Starters",
-            "itemCode": "198"
-          },
-          {
-            "itemName": "Egg Burji",
-            "itemPrice": "50",
-            "itemCategory": "nonveg",
-            "itemType": "Starters",
-            "itemCode": "199"
-          },
-          {
-            "itemName": "Boiled Egg",
-            "itemPrice": "25",
-            "itemCategory": "nonveg",
-            "itemType": "Starters",
-            "itemCode": "200"
-          },
-          {
-            "itemName": "Egg Omlete",
-            "itemPrice": "50",
-            "itemCategory": "nonveg",
-            "itemType": "Starters",
-            "itemCode": "201"
-          },
-          {
-            "itemName": "Egg Manchurian",
-            "itemPrice": "110",
-            "itemCategory": "nonveg",
-            "itemType": "Starters",
-            "itemCode": "202"
-          },
-          {
-            "itemName": "Egg Chilly",
-            "itemPrice": "110",
-            "itemCategory": "nonveg",
-            "itemType": "Starters",
-            "itemCode": "203"
-          },
-          {
-            "itemName": "Egg Kebab",
-            "itemPrice": "90",
-            "itemCategory": "nonveg",
-            "itemType": "Starters",
-            "itemCode": "204"
-          },
-          {
-            "itemName": "Egg Half fry",
-            "itemPrice": "50",
-            "itemCategory": "nonveg",
-            "itemType": "Starters",
-            "itemCode": "205"
-          },
-          {
-            "itemName": "Mutton Fry",
-            "itemPrice": "135",
-            "itemCategory": "nonveg",
-            "itemType": "Starters",
-            "itemCode": "206"
-          },
-          {
-            "itemName": "Mutton Sukka",
-            "itemPrice": "185",
-            "itemCategory": "nonveg",
-            "itemType": "Starters",
-            "itemCode": "207"
-          },
-          {
-            "itemName": "Mutton Chilly",
-            "itemPrice": "180",
-            "itemCategory": "nonveg",
-            "itemType": "Starters",
-            "itemCode": "208"
-          },
-          {
-            "itemName": "Mutton Manchurian",
-            "itemPrice": "200",
-            "itemCategory": "nonveg",
-            "itemType": "Starters",
-            "itemCode": "209"
-          }
-        ],
-        "tandooriSnacks":[
-          {
-            "itemName": "Chicken Green Leg (1 pcs)",
-            "itemPrice": "130",
-            "itemCategory": "nonveg",
-            "itemType": "Tandoori Snacks",
-            "itemCode": "210"
-          },
-          {
-            "itemName": "Chicken Green Leg (2 pcs)",
-            "itemPrice": "250",
-            "itemCategory": "nonveg",
-            "itemType": "Tandoori Snacks",
-            "itemCode": "211"
-          },
-          {
-            "itemName": "Chicken Tandoori (Half)",
-            "itemPrice": "180",
-            "itemCategory": "nonveg",
-            "itemType": "Tandoori Snacks",
-            "itemCode": "212"
-          },
-          {
-            "itemName": "Chicken Tandoori (Full)",
-            "itemPrice": "320",
-            "itemCategory": "nonveg",
-            "itemType": "Tandoori Snacks",
-            "itemCode": "213"
-          },
-          {
-            "itemName": "Chicken Tangdi Kebab (1 pcs)",
-            "itemPrice": "60",
-            "itemCategory": "nonveg",
-            "itemType": "Tandoori Snacks",
-            "itemCode": "214"
-          },
-          {
-            "itemName": "Chicken Tangdi Kebab (2 pcs)",
-            "itemPrice": "110",
-            "itemCategory": "nonveg",
-            "itemType": "Tandoori Snacks",
-            "itemCode": "215"
-          },
-          {
-            "itemName": "Chicken Tikka Kebab (6 pcs)",
-            "itemPrice": "150",
-            "itemCategory": "nonveg",
-            "itemType": "Tandoori Snacks",
-            "itemCode": "216"
-          },
-          {
-            "itemName": "Chicken sholay Kebab (6pcs)",
-            "itemPrice": "160",
-            "itemCategory": "nonveg",
-            "itemType": "Tandoori Snacks",
-            "itemCode": "217"
-          },
-          {
-            "itemName": "Chicken Adraki Kebab (6pcs)",
-            "itemPrice": "160",
-            "itemCategory": "nonveg",
-            "itemType": "Tandoori Snacks",
-            "itemCode": "218"
-          }
-        ],
-        "fish": [
-
-        ]
-      }
-    ]
-  }
+  "menuItems": [
+    {
+      "dishes": [
+        {
+          "itemName": "Chicken Curry",
+          "itemPrice": "90",
+          "itemCategory": "nonveg",
+          "itemType": "dish",
+          "itemCode": "219"
+        },
+        {
+          "itemName": "Chicken Masala",
+          "itemPrice": "110",
+          "itemCategory": "nonveg",
+          "itemType": "dish",
+          "itemCode": "220"
+        },
+        {
+          "itemName": "Chicken Kolhapuri",
+          "itemPrice": "120",
+          "itemCategory": "nonveg",
+          "itemType": "dish",
+          "itemCode": "221"
+        },
+        {
+          "itemName": "Chicken Butter Masala",
+          "itemPrice": "120",
+          "itemCategory": "nonveg",
+          "itemType": "dish",
+          "itemCode": "222"
+        },
+        {
+          "itemName": "Chicken Hydrabadi",
+          "itemPrice": "120",
+          "itemCategory": "nonveg",
+          "itemType": "dish",
+          "itemCode": "223"
+        },
+        {
+          "itemName": "Chicken Mastani (B/L)",
+          "itemPrice": "150",
+          "itemCategory": "nonveg",
+          "itemType": "dish",
+          "itemCode": "224"
+        },
+        {
+          "itemName": "Chicken Kadai (4 PCS)",
+          "itemPrice": "150",
+          "itemCategory": "nonveg",
+          "itemType": "dish",
+          "itemCode": "225"
+        },
+        {
+          "itemName": "Chicken Tawa Masala (Half Handi)",
+          "itemPrice": "220",
+          "itemCategory": "nonveg",
+          "itemType": "dish",
+          "itemCode": "226"
+        },
+        {
+          "itemName": "Chicken Tawa Masala (Full Handi)",
+          "itemPrice": "390",
+          "itemCategory": "nonveg",
+          "itemType": "dish",
+          "itemCode": "227"
+        },
+        {
+          "itemName": "Chicken Masala (Half Handi)",
+          "itemPrice": "210",
+          "itemCategory": "nonveg",
+          "itemType": "dish",
+          "itemCode": "228"
+        },
+        {
+          "itemName": "Chicken Masala (Full Handi)",
+          "itemPrice": "380",
+          "itemCategory": "nonveg",
+          "itemType": "dish",
+          "itemCode": "229"
+        },
+        {
+          "itemName": "Chicken Kolhapuri (Half Handi)",
+          "itemPrice": "220",
+          "itemCategory": "nonveg",
+          "itemType": "dish",
+          "itemCode": "230"
+        },
+        {
+          "itemName": "Chicken Kolhapuri (Full Handi)",
+          "itemPrice": "390",
+          "itemCategory": "nonveg",
+          "itemType": "dish",
+          "itemCode": "231"
+        },
+        {
+          "itemName": "Chicken Butter Masala (Half Handi)",
+          "itemPrice": "230",
+          "itemCategory": "nonveg",
+          "itemType": "dish",
+          "itemCode": "232"
+        },
+        {
+          "itemName": "Chicken Butter Masala (Full Handi)",
+          "itemPrice": "400",
+          "itemCategory": "nonveg",
+          "itemType": "dish",
+          "itemCode": "233"
+        },
+        {
+          "itemName": "Chicken Hydrabadi (Half Handi)",
+          "itemPrice": "220",
+          "itemCategory": "nonveg",
+          "itemType": "dish",
+          "itemCode": "234"
+        },
+        {
+          "itemName": "Chicken Mastani B/L (Half Handi)",
+          "itemPrice": "270",
+          "itemCategory": "nonveg",
+          "itemType": "dish",
+          "itemCode": "235"
+        },
+        {
+          "itemName": "Chicken Mastani B/L (Full Handi)",
+          "itemPrice": "495",
+          "itemCategory": "nonveg",
+          "itemType": "dish",
+          "itemCode": "236"
+        },
+        {
+          "itemName": "Chicken Ghee Roast (Half Handi)",
+          "itemPrice": "240",
+          "itemCategory": "nonveg",
+          "itemType": "dish",
+          "itemCode": "237"
+        },
+        {
+          "itemName": "Chicken Ghee Roast (Full Handi)",
+          "itemPrice": "440",
+          "itemCategory": "nonveg",
+          "itemType": "dish",
+          "itemCode": "238"
+        },
+        {
+          "itemName": "Chicken Savaji Spl(Half Handi)",
+          "itemPrice": "210",
+          "itemCategory": "nonveg",
+          "itemType": "dish",
+          "itemCode": "239"
+        },
+        {
+          "itemName": "Chicken Savaji Spl (Full Handi)",
+          "itemPrice": "380",
+          "itemCategory": "nonveg",
+          "itemType": "dish",
+          "itemCode": "240"
+        },
+        {
+          "itemName": "Chicken Maharaja (Half Handi)",
+          "itemPrice": "230",
+          "itemCategory": "nonveg",
+          "itemType": "dish",
+          "itemCode": "241"
+        },
+        {
+          "itemName": "Chicken Maharaja (Full Handi)",
+          "itemPrice": "410",
+          "itemCategory": "nonveg",
+          "itemType": "dish",
+          "itemCode": "242"
+        },
+        {
+          "itemName": "Chicken Malvani (Half Handi)",
+          "itemPrice": "230",
+          "itemCategory": "nonveg",
+          "itemType": "dish",
+          "itemCode": "243"
+        },
+        {
+          "itemName": "Chicken Malvani (Full Handi)",
+          "itemPrice": "410",
+          "itemCategory": "nonveg",
+          "itemType": "dish",
+          "itemCode": "244"
+        },
+        {
+          "itemName": "Chicken Pondicherry (Half Handi)",
+          "itemPrice": "230",
+          "itemCategory": "nonveg",
+          "itemType": "dish",
+          "itemCode": "245"
+        },
+        {
+          "itemName": "Chicken Pondicherry (Full Handi)",
+          "itemPrice": "410",
+          "itemCategory": "nonveg",
+          "itemType": "dish",
+          "itemCode": "246"
+        },
+        {
+          "itemName": "Egg Masala",
+          "itemPrice": "85",
+          "itemCategory": "nonveg",
+          "itemType": "dish",
+          "itemCode": "247"
+        },
+        {
+          "itemName": "Egg Curry",
+          "itemPrice": "75",
+          "itemCategory": "nonveg",
+          "itemType": "dish",
+          "itemCode": "248"
+        },
+        {
+          "itemName": "Egg D.K",
+          "itemPrice": "100",
+          "itemCategory": "nonveg",
+          "itemType": "dish",
+          "itemCode": "249"
+        },
+        {
+          "itemName": "Egg Basanti Masala",
+          "itemPrice": "120",
+          "itemCategory": "nonveg",
+          "itemType": "dish",
+          "itemCode": "250"
+        },
+        {
+          "itemName": "Egg Butter Masala",
+          "itemPrice": "100",
+          "itemCategory": "nonveg",
+          "itemType": "dish",
+          "itemCode": "251"
+        },
+        {
+          "itemName": "Egg Kolhapuri",
+          "itemPrice": "100",
+          "itemCategory": "nonveg",
+          "itemType": "dish",
+          "itemCode": "252"
+        },
+        {
+          "itemName": "Egg Hydrabadi",
+          "itemPrice": "100",
+          "itemCategory": "nonveg",
+          "itemType": "dish",
+          "itemCode": "253"
+        },
+        {
+          "itemName": "Egg Malvani",
+          "itemPrice": "130",
+          "itemCategory": "nonveg",
+          "itemType": "dish",
+          "itemCode": "254"
+        },
+        {
+          "itemName": "Egg Pondicherry",
+          "itemPrice": "130",
+          "itemCategory": "nonveg",
+          "itemType": "dish",
+          "itemCode": "255"
+        },
+        {
+          "itemName": "Egg Kadai (3 Egg)",
+          "itemPrice": "120",
+          "itemCategory": "nonveg",
+          "itemType": "dish",
+          "itemCode": "256"
+        }
+      ],
+      "starters": [
+        {
+          "itemName": "Chicken 65",
+          "itemPrice": "120",
+          "itemCategory": "nonveg",
+          "itemType": "Starters",
+          "itemCode": "184"
+        },
+        {
+          "itemName": "Chicken Chilly",
+          "itemPrice": "130",
+          "itemCategory": "nonveg",
+          "itemType": "Starters",
+          "itemCode": "185"
+        },
+        {
+          "itemName": "Chicken Manchurian",
+          "itemPrice": "140",
+          "itemCategory": "nonveg",
+          "itemType": "Starters",
+          "itemCode": "186"
+        },
+        {
+          "itemName": "Chicken Oil fry (7 pcs)",
+          "itemPrice": "150",
+          "itemCategory": "nonveg",
+          "itemType": "Starters",
+          "itemCode": "187"
+        },
+        {
+          "itemName": "Chicken fry",
+          "itemPrice": "100",
+          "itemCategory": "nonveg",
+          "itemType": "Starters",
+          "itemCode": "188"
+        },
+        {
+          "itemName": "Chicken Lolypop",
+          "itemPrice": "160",
+          "itemCategory": "nonveg",
+          "itemType": "Starters",
+          "itemCode": "189"
+        },
+        {
+          "itemName": "Chicken China town",
+          "itemPrice": "170",
+          "itemCategory": "nonveg",
+          "itemType": "Starters",
+          "itemCode": "190"
+        },
+        {
+          "itemName": "Chicken chilly milly",
+          "itemPrice": "160",
+          "itemCategory": "nonveg",
+          "itemType": "Starters",
+          "itemCode": "191"
+        },
+        {
+          "itemName": "Lemon Chicken (6 pcs)",
+          "itemPrice": "150",
+          "itemCategory": "nonveg",
+          "itemType": "Starters",
+          "itemCode": "192"
+        },
+        {
+          "itemName": "Chicken Coriander",
+          "itemPrice": "160",
+          "itemCategory": "nonveg",
+          "itemType": "Starters",
+          "itemCode": "193"
+        },
+        {
+          "itemName": "Chicken chinise 65",
+          "itemPrice": "130",
+          "itemCategory": "nonveg",
+          "itemType": "Starters",
+          "itemCode": "194"
+        },
+        {
+          "itemName": "Chicken Sukka",
+          "itemPrice": "100",
+          "itemCategory": "nonveg",
+          "itemType": "Starters",
+          "itemCode": "195"
+        },
+        {
+          "itemName": "Chicken Schzailt",
+          "itemPrice": "160",
+          "itemCategory": "nonveg",
+          "itemType": "Starters",
+          "itemCode": "196"
+        },
+        {
+          "itemName": "Chicken Green pan fry",
+          "itemPrice": "190",
+          "itemCategory": "nonveg",
+          "itemType": "Starters",
+          "itemCode": "197"
+        },
+        {
+          "itemName": "Chicken Dragon",
+          "itemPrice": "160",
+          "itemCategory": "nonveg",
+          "itemType": "Starters",
+          "itemCode": "198"
+        },
+        {
+          "itemName": "Egg Burji",
+          "itemPrice": "50",
+          "itemCategory": "nonveg",
+          "itemType": "Starters",
+          "itemCode": "199"
+        },
+        {
+          "itemName": "Boiled Egg",
+          "itemPrice": "25",
+          "itemCategory": "nonveg",
+          "itemType": "Starters",
+          "itemCode": "200"
+        },
+        {
+          "itemName": "Egg Omlete",
+          "itemPrice": "50",
+          "itemCategory": "nonveg",
+          "itemType": "Starters",
+          "itemCode": "201"
+        },
+        {
+          "itemName": "Egg Manchurian",
+          "itemPrice": "110",
+          "itemCategory": "nonveg",
+          "itemType": "Starters",
+          "itemCode": "202"
+        },
+        {
+          "itemName": "Egg Chilly",
+          "itemPrice": "110",
+          "itemCategory": "nonveg",
+          "itemType": "Starters",
+          "itemCode": "203"
+        },
+        {
+          "itemName": "Egg Kebab",
+          "itemPrice": "90",
+          "itemCategory": "nonveg",
+          "itemType": "Starters",
+          "itemCode": "204"
+        },
+        {
+          "itemName": "Egg Half fry",
+          "itemPrice": "50",
+          "itemCategory": "nonveg",
+          "itemType": "Starters",
+          "itemCode": "205"
+        },
+        {
+          "itemName": "Mutton Fry",
+          "itemPrice": "135",
+          "itemCategory": "nonveg",
+          "itemType": "Starters",
+          "itemCode": "206"
+        },
+        {
+          "itemName": "Mutton Sukka",
+          "itemPrice": "185",
+          "itemCategory": "nonveg",
+          "itemType": "Starters",
+          "itemCode": "207"
+        },
+        {
+          "itemName": "Mutton Chilly",
+          "itemPrice": "180",
+          "itemCategory": "nonveg",
+          "itemType": "Starters",
+          "itemCode": "208"
+        },
+        {
+          "itemName": "Mutton Manchurian",
+          "itemPrice": "200",
+          "itemCategory": "nonveg",
+          "itemType": "Starters",
+          "itemCode": "209"
+        }
+      ],
+      "tandooriSnacks": [
+        {
+          "itemName": "Chicken Green Leg (1 pcs)",
+          "itemPrice": "130",
+          "itemCategory": "nonveg",
+          "itemType": "Tandoori Snacks",
+          "itemCode": "210"
+        },
+        {
+          "itemName": "Chicken Green Leg (2 pcs)",
+          "itemPrice": "250",
+          "itemCategory": "nonveg",
+          "itemType": "Tandoori Snacks",
+          "itemCode": "211"
+        },
+        {
+          "itemName": "Chicken Tandoori (Half)",
+          "itemPrice": "180",
+          "itemCategory": "nonveg",
+          "itemType": "Tandoori Snacks",
+          "itemCode": "212"
+        },
+        {
+          "itemName": "Chicken Tandoori (Full)",
+          "itemPrice": "320",
+          "itemCategory": "nonveg",
+          "itemType": "Tandoori Snacks",
+          "itemCode": "213"
+        },
+        {
+          "itemName": "Chicken Tangdi Kebab (1 pcs)",
+          "itemPrice": "60",
+          "itemCategory": "nonveg",
+          "itemType": "Tandoori Snacks",
+          "itemCode": "214"
+        },
+        {
+          "itemName": "Chicken Tangdi Kebab (2 pcs)",
+          "itemPrice": "110",
+          "itemCategory": "nonveg",
+          "itemType": "Tandoori Snacks",
+          "itemCode": "215"
+        },
+        {
+          "itemName": "Chicken Tikka Kebab (6 pcs)",
+          "itemPrice": "150",
+          "itemCategory": "nonveg",
+          "itemType": "Tandoori Snacks",
+          "itemCode": "216"
+        },
+        {
+          "itemName": "Chicken sholay Kebab (6pcs)",
+          "itemPrice": "160",
+          "itemCategory": "nonveg",
+          "itemType": "Tandoori Snacks",
+          "itemCode": "217"
+        },
+        {
+          "itemName": "Chicken Adraki Kebab (6pcs)",
+          "itemPrice": "160",
+          "itemCategory": "nonveg",
+          "itemType": "Tandoori Snacks",
+          "itemCode": "218"
+        }
+      ],
+      "fish": []
+    }
+  ]
+}
